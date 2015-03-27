@@ -1,0 +1,18 @@
+/*! overruling the other settings */
+
+.text-primary {
+  color: #C2C2C2;
+}
+
+.present {
+    color: #FFF;
+    background-color: #545454;
+}
+
+.title-center {
+    text-align: center;    
+}
+
+.h1 {
+  font-size: 50px;
+}
