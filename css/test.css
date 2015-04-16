@@ -5,8 +5,13 @@
 }
 
 .present {
+    margin-top: -30px;
     color: #FFF;
     background-color: #545454;
+}
+
+.present .col-md-6{
+    margin-top: 30px;
 }
 
 .title-center {
