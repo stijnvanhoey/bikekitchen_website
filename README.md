@@ -6,7 +6,7 @@ The new template is using bootstrap and the clean-blog theme is used from [Start
 
 # Bikekitchen
 
-Bikekitchen is an open working space to repair your bike. Tools, beers and assistance are available each Monday (14-18h) and Thursday (18-22h) at the *Binnenweg*, Brugse Poort  and each Wednesday (18-21h) at the *Standaertsite*, Ledeberg.
+Bikekitchen is an open working space to repair your bike. Tools, beers and assistance are available each Monday (14-18h) and Thursday (18-22h) at [Treck Hostel](http://www.treckhostel.be), Groendreef 51, Brugse Poort, Gent  and each Wednesday (18-21h) at the *Standaertsite*, Hoveniersstraat 40, Ledeberg, Gent.
 
 
 # Theme
