@@ -1,6 +1,5 @@
 # Website Fietskeuken Gent
 
-
 ## Development
 
 Setup is powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
@@ -29,5 +28,3 @@ You can preview the production build with `npm run preview`.
 ### Deployment
 
 Site is hosted on server with Apache server and the Sveltekit project is using the `@sveltejs/adapter-static` to convert the project to a static website (which does not need a node server).
-
-

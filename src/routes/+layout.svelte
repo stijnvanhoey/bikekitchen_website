@@ -23,12 +23,18 @@
 	<title>Fietskeuken Gent</title>
 	<link rel="icon" href="/img/favicon.ico" />
 
-	<meta name="description" content="Tijdens de RepareerBAaR van de Fietskeuken kunnen fietsliefhebbers vrijblijvend sleutelen met hulp van de vrijwilligers." />
+	<meta
+		name="description"
+		content="Tijdens de RepareerBAaR van de Fietskeuken kunnen fietsliefhebbers vrijblijvend sleutelen met hulp van de vrijwilligers."
+	/>
 
 	<meta property="og:title" content="Fietskeuken Gent, in Ledeberg en de Brugse Poort" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="https://fietskeuken.org" />
-	<meta property="og:description" content="Tijdens de RepareerBAaR van de Fietskeuken kunnen fietsliefhebbers vrijblijvend sleutelen met hulp van de vrijwilligers." />
+	<meta
+		property="og:description"
+		content="Tijdens de RepareerBAaR van de Fietskeuken kunnen fietsliefhebbers vrijblijvend sleutelen met hulp van de vrijwilligers."
+	/>
 	<meta property="og:image" content="https://www.fietskeuken.org/img/logo_fk.webp" />
 	<meta property="og:image:width" content="450" />
 	<meta property="og:image:height" content="450" />
@@ -134,7 +140,11 @@
 					></svg
 				>
 			</a>
-			<a class="ml-3 text-lightgray" href="https://github.com/stijnvanhoey/2015_fk_website" aria-label="Check out the source code of the bike kitchen on Github">
+			<a
+				class="ml-3 text-lightgray"
+				href="https://github.com/stijnvanhoey/2015_fk_website"
+				aria-label="Check out the source code of the bike kitchen on Github"
+			>
 				<svg
 					width="24px"
 					height="24px"

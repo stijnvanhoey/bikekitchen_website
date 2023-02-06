@@ -61,7 +61,7 @@
 			</p>
 			<div class="flex items-center justify-center">
 				<a href="https://uitin.gent.be/">
-					<img class="block m-4" src="img/uitpas-logo-bw.png" alt="UitPAS"/>
+					<img class="block m-4" src="img/uitpas-logo-bw.png" alt="UitPAS" />
 				</a>
 			</div>
 			<p>
