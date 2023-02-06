@@ -1,0 +1,15 @@
+Redirect 302 /fk https://fietskeuken.org
+Redirect 302 /ledeberg https://fietskeuken.org
+
+# Rewrite non /build/ requests to /build/
+
+RewriteCond %{REQUEST_URI} !^/build/
+
+RewriteRule ^(.*)$ /build/$1 [L]
+
+# Rewrite requests to non-existing files/dirs to /build/index.html
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ /build/index.html [L]
