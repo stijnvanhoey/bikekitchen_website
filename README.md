@@ -1,24 +1,38 @@
-# BikeKitchen Ghent website
+# create-svelte
 
-This repo contains the code for the development of the Bikekitchen Ghent website, http://fietskeuken.org 
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-The new template is using bootstrap and the clean-blog theme is used from [Start Bootstrap](http://startbootstrap.com/)
+## Creating a project
 
-# Bikekitchen
+If you're seeing this, you've probably already done this step. Congrats!
 
-Bikekitchen is an open working space to repair your bike. Tools, beers and assistance are available each Monday (14-18h) and Thursday (18-22h) at [Treck Hostel](http://www.treckhostel.be), Groendreef 51, Brugse Poort, Gent  and each Wednesday (18-21h) at the *Standaertsite*, Hoveniersstraat 40, Ledeberg, Gent.
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
+# create a new project in my-app
+npm create svelte@latest my-app
+```
 
-# Theme
+## Developing
 
-## [Start Bootstrap](http://startbootstrap.com/) - [Clean Blog](http://startbootstrap.com/template-overviews/clean-blog/)
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-[Clean Blog](http://startbootstrap.com/template-overviews/clean-blog/) is a stylish, responsive blog theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features a blog homepage, about page, contact page, and an example post page along with a working PHP contact form.
+```bash
+npm run dev
 
-## Creator
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-Start Bootstrap was created by and is maintained by **David Miller**, Managing Parter at [Iron Summit Media Strategies](http://www.ironsummitmedia.com/).
+## Building
 
-## Copyright and License
+To create a production version of your app:
 
-Copyright 2013-2015 Iron Summit Media Strategies, LLC. Code released under the [Apache 2.0](https://github.com/IronSummitMedia/startbootstrap-clean-blog/blob/gh-pages/LICENSE) license.
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
