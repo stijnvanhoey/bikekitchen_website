@@ -119,7 +119,7 @@
 			Fietskeuken Gent VZW &#x2014; Email: <a href="mailto:info@fietskeuken.org?SUBJECT=Vraag%20via%20website%20footer%20link">info@fietskeuken.org</a><br>
 			Ondernemingsnummer: 834.610.269<br>
 			Rekeningnummer: BE95 8939 4404 2158<br>
-			RPR, Rechtbank van koophandel te Gent<br><br>
+			RPR, Ondernemingsrechtbank te Gent<br><br>
 			Logo by Koen Degroote &#x2014; Photos by Daan Van Hauwermeiren
 		</p>
 		<span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
