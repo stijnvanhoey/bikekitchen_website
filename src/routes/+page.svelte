@@ -38,7 +38,7 @@
 					</svg>
 				</div>
 				<h2 class="text-2xl text-white font-extrabold m-4">Brugse Poort</h2>
-				<p class="text-xl my-8">Dinsdag: 18u - 21u</p>
+				<p class="text-xl my-8">Donderdag: 18u - 21u30</p>
 				<a href="https://goo.gl/maps/jufjmNWP3hALfHmf6" class="text-center">
 					<p class="leading-loose font-bold text-lg">Meubelfabriek</p>
 					<p>Meibloemstraat 18</p>
