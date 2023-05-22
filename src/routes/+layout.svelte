@@ -38,6 +38,8 @@
 	<meta property="og:image" content="https://www.fietskeuken.org/img/logo_fk.webp" />
 	<meta property="og:image:width" content="450" />
 	<meta property="og:image:height" content="450" />
+	<script data-goatcounter="https://fietskeuken.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </svelte:head>
 
 <header
@@ -114,6 +116,10 @@
 		<p
 			class="text-sm text-lightgray sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-lightgray sm:py-2 sm:mt-0 mt-4"
 		>
+			Fietskeuken Gent VZW &#x2014; Email: <a href="mailto:info@fietskeuken.org?SUBJECT=Vraag%20via%20website%20footer%20link">info@fietskeuken.org</a><br>
+			Ondernemingsnummer: 834.610.269<br>
+			Rekeningnummer: BE95 8939 4404 2158<br>
+			RPR, Rechtbank van koophandel te Gent<br><br>
 			Logo by Koen Degroote &#x2014; Photos by Daan Van Hauwermeiren
 		</p>
 		<span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
