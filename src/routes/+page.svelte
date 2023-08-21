@@ -37,7 +37,7 @@
 						/>
 					</svg>
 				</div>
-				<h2 class="text-2xl text-white font-extrabold m-4">Brugse Poort</h2>
+				<h2 class="text-2xl text-white font-extrabold m-4">FK Brugse Poort</h2>
 				<p class="text-xl my-8">Donderdag: 18u - 21u30</p>
 				<a href="https://goo.gl/maps/jufjmNWP3hALfHmf6" class="text-center">
 					<p class="leading-loose font-bold text-lg">Meubelfabriek</p>
@@ -70,11 +70,11 @@
 						/>
 					</svg>
 				</div>
-				<h2 class="text-2xl text-white font-extrabold m-4">Ledeberg</h2>
-				<p class="text-xl my-8">Woensdag: 18u - 21u</p>
+				<h2 class="text-2xl text-white font-extrabold m-4">FK Ledeberg</h2>
+				<p class="text-xl my-8">Woensdag: 18u30 - 21u</p>
 				<a href="https://goo.gl/maps/Y75sUcsPnFZaHzJb8" class="text-center">
 					<p class="leading-loose font-bold text-lg">Standaertsite</p>
-					<p>Hoveniersstraat 40</p>
+					<p>Standaertsite 1</p>
 					<p>9050 Ledeberg</p>
 				</a>
 			</div>
@@ -93,8 +93,8 @@
 						<span class="font-medium text-lg text-lightgray leading-none title-font">2023</span>
 					</div>
 					<div class="flex-grow pl-6">
-						<p class="tracking-widest text-xs title-font font-medium text-lightgray">
-							Brugse Poort
+						<p class="tracking-widest text-xs title-font font-medium text-gray">
+							FK Brugse Poort
 						</p>
 						<h2 class="title-font text-xl font-medium text-darkgray mb-3">
 							Fietskeuken vanaf 9 februari op donderdag
@@ -115,8 +115,8 @@
 						<span class="font-medium text-lg text-lightgray leading-none title-font">2022</span>
 					</div>
 					<div class="flex-grow pl-6">
-						<p class="tracking-widest text-xs title-font font-medium text-lightgray">
-							Brugse Poort
+						<p class="tracking-widest text-xs title-font font-medium text-gray">
+							FK Brugse Poort
 						</p>
 						<h2 class="title-font text-xl font-medium text-darkgray mb-3">
 							Afscheid van de maandagploeg
@@ -144,8 +144,8 @@
 						<span class="font-medium text-lg text-lightgray leading-none title-font">2022</span>
 					</div>
 					<div class="flex-grow pl-6">
-						<p class="tracking-widest text-xs title-font font-medium text-lightgray">
-							Brugse Poort
+						<p class="tracking-widest text-xs title-font font-medium text-gray">
+							FK Brugse Poort
 						</p>
 						<h2 class="title-font text-xl font-medium text-darkgray mb-3">
 							Fietskeuken Brugse Poort open op dinsdag
@@ -168,8 +168,8 @@
 						<span class="font-medium text-lg text-lightgray leading-none title-font">2019</span>
 					</div>
 					<div class="flex-grow pl-6">
-						<p class="tracking-widest text-xs title-font font-medium text-lightgray">
-							Brugse Poort
+						<p class="tracking-widest text-xs title-font font-medium text-gray">
+							FK Brugse Poort
 						</p>
 						<h2 class="title-font text-xl font-medium text-darkgray mb-3">
 							Nieuw adres Fietskeuken Brugse Poort!
