@@ -38,7 +38,8 @@
 					</svg>
 				</div>
 				<h2 class="text-2xl text-white font-extrabold m-4">FK Brugse Poort</h2>
-				<p class="text-xl my-8">Donderdag: 18u - 21u30</p>
+				<p class="text-xl my-1 text-center">Heel vaak open op<br>donderdag van 16:00 - 21:30</p>
+				<p class="text-sm mb-8 text-center">Om helemaal zeker te zijn, check <a href="https://www.facebook.com/FietskeukenGent" class="underline">Facebook</a></p>
 				<a href="https://goo.gl/maps/jufjmNWP3hALfHmf6" class="text-center">
 					<p class="leading-loose font-bold text-lg">Meubelfabriek</p>
 					<p>Meibloemstraat 18</p>
@@ -86,6 +87,30 @@
 	<div class="container px-5 py-10 mx-auto max-w-screen-md">
 		<HeaderStyled header="Nieuws" />
 		<div class="flex flex-wrap -mx-4 my-8 text-lg md:text-base">
+
+			<div class="blog-post py-8 px-4">
+				<div class="h-full flex items-start">
+					<div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
+						<span class="text-darkgray pb-2 mb-2 border-b-2 border-darkgray">Nov</span>
+						<span class="font-medium text-lg text-lightgray leading-none title-font">2023</span>
+					</div>
+					<div class="flex-grow pl-6">
+						<p class="tracking-widest text-xs title-font font-medium text-gray">
+							FK Brugse Poort
+						</p>
+						<h2 class="title-font text-xl font-medium text-darkgray mb-3">
+							Fietskeuken Brugse Poort vanaf 16u geopend
+						</h2>
+						<p class="leading-relaxed mb-5">
+							Sinds oktober 2023 is de Fietskeuken in de Brugse Poort op donderdag al vanaf 16h open. Kom dus extra vroeg als je extra veel werk hebt aan je fiets.
+							Let wel: als er eens een tekort is aan vrijwilligers kunnen onze openingsuren afwijken.
+							Check daarom best steeds onze <a href="https://www.facebook.com/FietskeukenGent" class="underline">Facebookpagina</a>
+						</p>
+					</div>
+				</div>
+			</div>
+
+
 			<div class="blog-post py-8 px-4">
 				<div class="h-full flex items-start">
 					<div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
