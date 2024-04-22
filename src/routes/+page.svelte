@@ -27,7 +27,7 @@
 						 <path d="m327.86 914.39h21v101.33h-21z"/>
 						 <path d="m522.21 893.9c-0.19141-0.058594-1.2109-0.38281-2.8672-0.82812l-13.5-4.4297v1.6797c-8.5078-1.2344-19.344-1.8594-30.215 0.085937-29.125 5.2422-34.812 23.34-34.812 52.859v61.957l0.085938 1.2617c1.6328 13.355 14.566 38.629 51.816 38.629h12.035c-7.8359 36.422-55.367 45.973-57.574 46.391l1.957 10.309 1.9453 10.309c24.996-4.6797 71.207-25.414 75.406-70.777l0.023437 0.070313 53.867-18.168v-110.17l-58.203-19.078zm-29.496 130.21c-25.715 0-30.254-16.332-30.898-19.727v-61.129c0-27.926 5.0625-29.953 17.531-32.195 9.5508-1.7148 19.43-0.74219 26.496 0.51562v112.52h-13.129zm34.117-106.49 32.543 10.68v79.871l-32.543 10.969z"/>
 						</g>
-					   </svg>
+					</svg>
 				</div>
 				<h2 class="text-2xl text-white font-extrabold m-4">FK Brugse Poort</h2>
 				<p class="text-xl my-1 text-center">Heel vaak open op<br>donderdag van 16:00 - 21:30</p>
@@ -90,6 +90,36 @@
 	<div class="container px-5 py-10 mx-auto max-w-screen-md">
 		<HeaderStyled header="Nieuws" />
 		<div class="flex flex-wrap -mx-4 my-8 text-lg md:text-base">
+
+			<div class="blog-post py-8 px-4">
+				<div class="h-full flex items-start">
+					<div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
+						<span class="text-darkgray pb-2 mb-2 border-b-2 border-darkgray">Apr</span>
+						<span class="font-medium text-lg text-lightgray leading-none title-font">2024</span>
+					</div>
+					<div class="flex-grow pl-6">
+						<p class="tracking-widest text-xs title-font font-medium text-gray">
+							FK Bloemekenswijk
+						</p>
+						<h2 class="title-font text-xl font-medium text-darkgray mb-3">
+							Feest! Ook het noorden van Gent krijgt zijn Fietskeuken.
+						</h2>
+						<p class="leading-relaxed mb-5">
+							In samenwerking met vzw Jong en OCUP vzw start er een nieuwe fietskeuken in de Bloemekenswijk op het
+							Jan Yoensplein. De ingang vind je op de hoek van de Kriekelaarstraat en de Maïsstraat. We starten op
+							<b>donderdag 2 mei</b> en zijn vanaf dan elke donderdag van 19u tot 21u open. De nieuwe fietskeuken beperkt
+							zich - voorlopig - tot het 'koken' met fietsonderdelen als ingrediënten. In de toekomst zijn speciale openingsavonden
+							met een maaltijd natuurlijk mogelijk.
+						</p>
+						<p>
+							Elke donderdagavond vanaf 2 mei 2024 welkom op de hoek van het Jan Yoensplein om aan je fiets te sleutelen, voor een
+							babbel of om er gewoon bij te zijn. Wie graag een handje toesteekt op welke manier dan ook, mag dat gerust laten
+							weten door te mailen naar <a href="mailto:fietskeukenbloemekenswijk@gmail.com?SUBJECT=Vraag%20via%20website"
+							class="font-medium hover:underline"> fietskeukenbloemekenswijk@gmail.com.</a>
+						</p>
+					</div>
+				</div>
+			</div>
 
 			<div class="blog-post py-8 px-4">
 				<div class="h-full flex items-start">
