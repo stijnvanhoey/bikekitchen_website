@@ -116,7 +116,7 @@
 		</div>
 		<div class="container flex px-8 py-8  mx-auto justify-start md:flex-row flex-col max-w-xs md:max-w-fit">
 			<p
-			class="text-sm text-lightgray sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-lightgray sm:py-2 sm:mt-0 mt-4"
+			class="text-sm text-lightgray sm:ml-4 sm:pl-4 sm:border-l sm:border-lightgray sm:py-2 sm:mt-0 mt-4"
 		>
 			FK Brugse Poort - Fietskeuken Gent VZW<br>
 			Email: <a href="mailto:info@fietskeuken.org?SUBJECT=Vraag%20via%20website%20footer%20link">info@fietskeuken.org</a><br>
@@ -125,13 +125,13 @@
 			RPR, Ondernemingsrechtbank te Gent<br><br>
 		</p>
 		<p
-			class="text-sm text-lightgray sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-lightgray sm:py-2 sm:mt-0 mt-4"
+			class="text-sm text-lightgray sm:ml-4 sm:pl-4 sm:border-l sm:border-lightgray sm:py-2 sm:mt-0 mt-4"
 		>
 			FK Ledeberg - Fietskeuken Ledeberg<br>
 			Email: <a href="mailto:fietskeukenledeberg@gmail.com?SUBJECT=Vraag%20via%20website%20footer%20link">fietskeukenledeberg@gmail.com</a><br>
 			Standaertsite 1 &#x2014; 9050 Ledeberg
 		</p>
-		<p class="text-sm text-lightgray sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-lightgray sm:py-2 sm:mt-0 mt-4">Logo by Koen Degroote<br>Photos by Daan Van Hauwermeiren</p>
+		<p class="text-sm text-lightgray sm:ml-4 sm:pl-4 sm:border-l sm:border-lightgray sm:py-2 sm:mt-0 mt-4">Logo by Koen Degroote<br>Photos by Daan Van Hauwermeiren</p>
 		</div>
 		<span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
 			<a
