@@ -12,7 +12,8 @@ module.exports = {
 				lightgray: '#9a9a9a',
 				extralightgray: '#e4e4e4',
 				white: '#f3f4f6',
-				blue: '#427AA1'
+				blue: '#427AA1',
+				velofestival: "#412f79"
 			},
 			fontFamily: {
 				atkinson: ['Atkinson']
