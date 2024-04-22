@@ -1,5 +1,6 @@
 <script>
 	import '../app.postcss';
+	import logo from '$lib/static/img/logo_fk.webp';
 
 	const navItems = [
 		{ label: 'Waar', href: '/#where' },
@@ -52,7 +53,7 @@
 	>
 		<div class="flex items-center justify-between h-16">
 			<div class="flex-1 flex items-center gap-4">
-				<img src="img/logo_fk.webp" alt="Logo Fietskeuken" class="w-12 h-12" />
+				<img src={logo} alt="Logo Fietskeuken" class="w-12 h-12" />
 				<a
 					href="/"
 					class="text-lg text-darkgray font-bold hover:text-lightgray"
@@ -110,7 +111,7 @@
 		<div
 			class="flex title-font font-medium items-center md:justify-start justify-center text-darkgray"
 		>
-			<img src="img/logo_fk.webp" alt="Logo Fietskeuken" class="w-6 h-6" />
+			<img src={logo} alt="Logo Fietskeuken" class="w-6 h-6" />
 			<span class="ml-3 text-xl">Bikekitchen</span>
 		</div>
 		<div class="container flex px-8 py-8  mx-auto justify-start md:flex-row flex-col max-w-xs md:max-w-fit">

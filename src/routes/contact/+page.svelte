@@ -1,12 +1,14 @@
 <script>
 	import FkHero from '$lib/components/FkHero.svelte';
+	import contactImg from '$lib/static/img/contact-bg.webp';
+	import logo from '$lib/static/img/logo_fk.webp';
 </script>
 
 <svelte:head>
 	<title>Contact Bikekitchen Ghent</title>
 </svelte:head>
 
-<FkHero imgUrl="img/contact-bg.webp" header="Contact" subheader="Vragen?" />
+<FkHero imgUrl={contactImg} header="Contact" subheader="Vragen?" />
 
 <section class="text-lightgray bg-darkgray body-font relative">
 
@@ -90,7 +92,7 @@
 	</div>
 
 	<p>We contacteren je zo snel mogelijk!</p>
-	<img src="img/logo_fk.webp" alt="Logo Fietskeuken" class="w-64 pt-12" />
+	<img src={logo} alt="Logo Fietskeuken" class="w-64 pt-12" />
 </div>
 </div>
 

@@ -1,13 +1,14 @@
 <script>
 	import FkHero from '$lib/components/FkHero.svelte';
 	import HeaderStyled from '../lib/components/HeaderStyled.svelte';
+	import homeImg from '$lib/static/img/home-bg.webp';
 </script>
 
 <svelte:head>
 	<title>Homepage Bikekitchen Ghent</title>
 </svelte:head>
 
-<FkHero imgUrl="img/home-bg.webp" header="Fietskeuken Gent" subheader="Bike repair and food" />
+<FkHero imgUrl={homeImg} header="Fietskeuken Gent" subheader="Bike repair and food" />
 
 <section id="where" class="text-lightgray bg-darkgray body-font pt-8">
 	<div class="container px-5 py-12 mx-auto max-w-screen-lg">
