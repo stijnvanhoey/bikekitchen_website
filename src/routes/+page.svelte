@@ -25,7 +25,7 @@
 		</div>
 		<div class="flex flex-col items-start mt-12 mb-16 pl-6 text-left lg:flex-grow lg:w-1/2 lg:pl-6 xl:pl-24 md:mb-0 xl:mt-0">
 			<span class="mb-4 text-xs tracking-widestuppercase text-velofestival font-extrabold bg-clip-padding inline-block p-1"> AANKONDIGING </span>
-			<h1 class="mb-4 text-4xl font-bold leading-none tracking-tighter text-darkgray md:text-4xl lg:text-5xl">Velo Fix Fair 16 juni 2024</h1>
+			<h1 class="mb-4 text-4xl font-bold leading-none tracking-tighter text-darkgray md:text-4xl lg:text-5xl"><a href="https://facebook.com/events/s/velo-fix-fair/2162686197415649/">Velo Fix Fair 16 juni 2024</a></h1>
 
 			<p class="mb-2 text-base leading-normal text-left text-darkgray">
 				Op <span class="font-extrabold">16 juni</span> komen de Gentse Fietskeukens en El Laboristo VZW uit hun fietskot! Kom van 10u tot 17u
@@ -44,6 +44,7 @@
 				<li>klein onderhoud: lichten checken, ketting smeren, banden oppompen, bel monteren,...</li>
 			</ul>
 			<p class="text-base leading-normal text-left text-darkgray">
+				Voor last minute info, check het <a href="https://facebook.com/events/s/velo-fix-fair/2162686197415649/" class="underline">Facebook event van de velo Fix fair</a>.
 				Deze activiteit is deel van het velo-festival. Voor alle activiteiten: <a href="https://stad.gent/nl/mobiliteit-openbare-werken/velo-festival" class="underline">velofestival.be</a>.
 			</p>
 		</div>
