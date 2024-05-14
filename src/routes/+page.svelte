@@ -2,6 +2,7 @@
 	import FkHero from '$lib/components/FkHero.svelte';
 	import HeaderStyled from '../lib/components/HeaderStyled.svelte';
 	import homeImg from '$lib/static/img/home-bg.webp';
+	import velocityImg from '$lib/static/img/2024_velofestival.jpg';
 </script>
 
 <svelte:head>
@@ -9,6 +10,47 @@
 </svelte:head>
 
 <FkHero imgUrl={homeImg} header="Fietskeuken Gent" subheader="Bike repair and food" />
+
+<section id="velofestival" class="bg-white ">
+	<div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-24">
+	  <div class="flex flex-wrap items-center mx-auto max-w-7xl justify-center">
+		<div class="w-full lg:max-w-lg lg:w-1/2 rounded-xl">
+		  <div class="flex justify-center">
+			<div class="relative w-full max-w-lg">
+			  <div class="relative">
+				<img class="object-cover object-center mx-auto rounded-lg shadow-2xl hover:grayscale-0" alt="hero" src={velocityImg}>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<div class="flex flex-col items-start mt-12 mb-16 pl-6 text-left lg:flex-grow lg:w-1/2 lg:pl-6 xl:pl-24 md:mb-0 xl:mt-0">
+			<span class="mb-4 text-xs tracking-widestuppercase text-velofestival font-extrabold bg-clip-padding inline-block p-1"> AANKONDIGING </span>
+			<h1 class="mb-4 text-4xl font-bold leading-none tracking-tighter text-darkgray md:text-4xl lg:text-5xl"><a href="https://facebook.com/events/s/velo-fix-fair/2162686197415649/">Velo Fix Fair 16 juni 2024</a></h1>
+
+			<p class="mb-2 text-base leading-normal text-left text-darkgray">
+				Op <span class="font-extrabold">16 juni</span> komen de Gentse Fietskeukens en El Laboristo VZW uit hun fietskot! Kom van 10u tot 17u
+				langs met je fiets onder de Stadshal en herstel je fiets samen met een van onze vrijwilligers. Staat je
+				fiets al tip-top in orde? Niet getreurd! Je kan nog steeds komen genieten van een zelf gemixt sapje, goed
+				gemixte plaatjes en een waar fietsherstelkampioenschap!
+			</p>
+			<p class="mb-2 text-base leading-normal text-left text-darkgray">
+				We focussen tijdens dit herstelmoment op 'eenvoudige' herstellingen:
+			</p>
+			<ul class="mb-2 list-disc text-base leading-normal text-left text-darkgray list-inside">
+				<li>remblokjes vervangen</li>
+				<li>rem -en versnellingskabels vervangen</li>
+				<li>remmen en versnellingen afstellen</li>
+				<li>binnenbanden repareren of vervangen</li>
+				<li>klein onderhoud: lichten checken, ketting smeren, banden oppompen, bel monteren,...</li>
+			</ul>
+			<p class="text-base leading-normal text-left text-darkgray">
+				Voor last minute info, check het <a href="https://facebook.com/events/s/velo-fix-fair/2162686197415649/" class="underline">Facebook event van de velo Fix fair</a>.
+				Deze activiteit is deel van het velo-festival. Voor alle activiteiten: <a href="https://stad.gent/nl/mobiliteit-openbare-werken/velo-festival" class="underline">velofestival.be</a>.
+			</p>
+		</div>
+	  </div>
+	</div>
+  </section>
 
 <section id="where" class="text-lightgray bg-darkgray body-font pt-8">
 	<div class="container px-5 py-12 mx-auto max-w-screen-lg">
@@ -85,6 +127,7 @@
 		</div>
 	</div>
 </section>
+
 
 <section id="news" class="text-darkgray bg-white body-font">
 	<div class="container px-5 py-10 mx-auto max-w-screen-md">
