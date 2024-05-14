@@ -130,6 +130,7 @@
 		>
 			FK Ledeberg - Fietskeuken Ledeberg<br>
 			Standaertsite 1 &#x2014; 9050 Ledeberg<br>
+			Rekeningnummer: BE90 3636 2351 5232<br>
 			Email: <a href="mailto:fietskeukenledeberg@gmail.com?SUBJECT=Vraag%20via%20website%20footer%20link">fietskeukenledeberg@gmail.com</a>
 		</p>
 		<p
