@@ -147,7 +147,7 @@
 						<h2 class="title-font text-xl font-medium text-darkgray mb-3">
 							Feest! Ook het noorden van Gent krijgt zijn Fietskeuken.
 						</h2>
-						<p class="leading-relaxed mb-5">
+						<p class="leading-relaxed mb-5 word-break: break-all">
 							In samenwerking met vzw Jong en OCUP vzw start er een nieuwe fietskeuken in de Bloemekenswijk op het
 							Jan Yoensplein. De ingang vind je op de hoek van de Kriekelaarstraat en de Maïsstraat. We starten op
 							<b>donderdag 2 mei</b> en zijn vanaf dan elke donderdag van 19u tot 21u open. De nieuwe fietskeuken beperkt
