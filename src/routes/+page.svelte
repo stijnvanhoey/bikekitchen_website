@@ -133,7 +133,6 @@
 	<div class="container px-5 py-10 mx-auto max-w-screen-md">
 		<HeaderStyled header="Nieuws" />
 		<div class="flex flex-wrap -mx-4 my-8 text-lg md:text-base">
-
 			<div class="blog-post py-8 px-4">
 				<div class="h-full flex items-start">
 					<div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
@@ -147,18 +146,14 @@
 						<h2 class="title-font text-xl font-medium text-darkgray mb-3">
 							Feest! Ook het noorden van Gent krijgt zijn Fietskeuken.
 						</h2>
-						<p class="leading-relaxed mb-5 word-break: break-all">
-							In samenwerking met vzw Jong en OCUP vzw start er een nieuwe fietskeuken in de Bloemekenswijk op het
-							Jan Yoensplein. De ingang vind je op de hoek van de Kriekelaarstraat en de Maïsstraat. We starten op
-							<b>donderdag 2 mei</b> en zijn vanaf dan elke donderdag van 19u tot 21u open. De nieuwe fietskeuken beperkt
-							zich - voorlopig - tot het 'koken' met fietsonderdelen als ingrediënten. In de toekomst zijn speciale openingsavonden
-							met een maaltijd natuurlijk mogelijk.
+						<p class="leading-relaxed mb-5">
+							In samenwerking met vzw Jong en OCUP vzw start er een nieuwe fietskeuken in de Bloemekenswijk op het Jan Yoensplein. De ingang vind je op de hoek van de Kriekelaarstraat en de Maïsstraat. We starten op donderdag 2 mei en zijn vanaf dan elke donderdag van 19u tot 21u open. De nieuwe fietskeuken beperkt zich - voorlopig - tot het 'koken' met fietsonderdelen als ingrediënten. In de toekomst zijn speciale openingsavonden met een maaltijd natuurlijk mogelijk.
 						</p>
-						<p>
+						<p class="leading-relaxed mb-5">
 							Elke donderdagavond vanaf 2 mei 2024 welkom op de hoek van het Jan Yoensplein om aan je fiets te sleutelen, voor een
 							babbel of om er gewoon bij te zijn. Wie graag een handje toesteekt op welke manier dan ook, mag dat gerust laten
 							weten door te mailen naar <a href="mailto:fietskeukenbloemekenswijk@gmail.com?SUBJECT=Vraag%20via%20website"
-							class="font-medium hover:underline"> fietskeukenbloemekenswijk@gmail.com.</a>
+							class="font-medium hover:underline break-all"> fietskeukenbloemekenswijk@gmail.com.</a>
 						</p>
 					</div>
 				</div>
