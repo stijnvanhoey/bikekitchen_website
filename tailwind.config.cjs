@@ -15,9 +15,7 @@ module.exports = {
 				blue: '#427AA1',
 				velofestival: "#412f79",
 			},
-			fontFamily: {
-				atkinson: ['Atkinson']
-			}
+
 		}
 	},
 	plugins: []

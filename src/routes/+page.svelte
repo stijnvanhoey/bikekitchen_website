@@ -11,7 +11,7 @@
 
 <FkHero imgUrl={homeImg} header="Fietskeuken Gent" subheader="Bike repair and food" />
 
-<section id="velofestival" class="bg-white ">
+<section id="velofestival" class="bg-white">
 	<div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 md:px-12 lg:px-24 lg:py-24">
 	  <div class="flex flex-wrap items-center mx-auto max-w-7xl justify-center">
 		<div class="w-full lg:max-w-lg lg:w-1/2 rounded-xl">

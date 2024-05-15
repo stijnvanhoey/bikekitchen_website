@@ -45,7 +45,7 @@
 
 <header
 	aria-label="Bike kitchen Ghent"
-	class="bg-white fixed top-0 left-0 right-0 z-10 font-atkinson"
+	class="bg-white fixed top-0 left-0 right-0 z-10"
 >
 	<nav
 		class="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 h-16 md:flex md:items-center md:justify-between"
@@ -102,11 +102,11 @@
 	</nav>
 </header>
 
-<main class="relative pt-16 font-atkinson">
+<main class="relative pt-16">
 	<slot />
 </main>
 
-<footer class="text-darkgray body-font font-atkinson">
+<footer class="text-darkgray body-font">
 	<div class="container px-5 py-8 mx-auto flex items-center flex-col">
 		<div
 			class="flex title-font font-medium items-center md:justify-start justify-center text-darkgray"
