@@ -93,6 +93,47 @@
 	<div class="container px-5 py-10 mx-auto max-w-screen-md">
 		<HeaderStyled header="Nieuws" />
 		<div class="flex flex-wrap -mx-4 my-8 text-lg md:text-base">
+
+			<div class="blog-post py-8 px-4">
+				<div class="h-full flex items-start">
+					<div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
+						<span class="text-darkgray pb-2 mb-2 border-b-2 border-darkgray">Jun</span>
+						<span class="font-medium text-lg text-lightgray leading-none title-font">2025</span>
+					</div>
+					<div class="flex-grow pl-6">
+						<p class="tracking-widest text-xs title-font font-medium text-gray">
+							FK Brugse Poort
+						</p>
+						<h2 class="title-font text-xl font-medium text-darkgray mb-3">
+							Fietskeuken Brugse Poort op zoek naar nieuwe locatie
+						</h2>
+						<p class="leading-relaxed mb-5">
+							Liefste fietsvrienden en fietsvriendinnen,
+						</p>
+						<p class="leading-relaxed mb-5">
+							Vonden jullie de afgelopen jaren de weg naar ons atelier in de Meubelfabriek? Fantastisch! Hopelijk bolt jullie stalen ros duchtig verder!
+						</p>
+						<p class="leading-relaxed mb-5">
+							Jullie zijn nog welkom tot eind 2025 in de Meubelfabriek, daarna stopt daar helaas de tijdelijke invulling en moet ook de Fietskeuken elders onderdak vinden...
+						</p>
+						<p class="leading-relaxed mb-5">
+							Hierbij dan ook een warme oproep: ken je een locatie in of nabij de Brugse Poort waar we onze werking kunnen verder zetten? Laat het ons dan weten! We zijn bereikbaar via <a href="mailto:info@fietskeuken.org"
+							class="font-medium hover:underline break-all">info@fietskeuken.org.</a>
+						</p>
+						<p class="leading-relaxed mb-5">
+							Ken je geen locatie, maar wil je toch helpen? Deel dit bericht dan, of spreek mensen aan die je kent van de Brugse Poort om het nieuws over onze zoektocht te verspreiden.
+						</p>
+						<p class="leading-relaxed mb-5">
+							Wij zijn jullie eeuwig dankbaar!
+						</p>
+						<p class="leading-relaxed mb-5">
+							Fijne fietsgroet,<br>
+							De Fietskeuken van de Brugse Poort
+						</p>
+					</div>
+				</div>
+			</div>
+
 			<div class="blog-post py-8 px-4">
 				<div class="h-full flex items-start">
 					<div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
