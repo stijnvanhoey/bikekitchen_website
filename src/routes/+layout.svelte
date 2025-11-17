@@ -121,7 +121,7 @@
 			FK Brugse Poort - Fietskeuken Gent VZW<br>
 			Meibloemstraat 18, 9000 Gent<br>
 			Email: <a href="mailto:info@fietskeuken.org?SUBJECT=Vraag%20via%20website%20footer%20link">info@fietskeuken.org</a><br>
-			Ondernemingsnummer: 834.610.269<br>
+			Ondernemingsnummer: BE 0834 610 269<br>
 			Rekeningnummer: BE95 8939 4404 2158<br>
 			RPR, Ondernemingsrechtbank te Gent<br><br>
 		</p>
@@ -142,7 +142,8 @@
 			Rekeningnummer: BE13363186230239<br><small>(vermelding: "FK bloemekenswijk" bij storting)</small>
 		</p>
 		</div>
-		<p class="text-sm text-lightgray sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4 text-center">Logo by Koen Degroote<br>Photos by Daan Van Hauwermeiren</p>
+		<p class="text-sm text-lightgray sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4 text-center"><a href="/privacy">Privacy beleid</a></p>
+		<p class="text-sm text-lightgray sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4 text-center">Logo Koen Degroote<br>Fotos Daan Van Hauwermeiren</p>
 		<div class="items-center">
 			<span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
 				<a
