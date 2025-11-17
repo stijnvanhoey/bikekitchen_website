@@ -113,7 +113,7 @@
 						<p class="leading-relaxed mb-5">We zijn dus zeker dat wij een andere locatie moeten vinden. Dus graag nog eens een oproep.</p>
 						<p class="leading-relaxed mb-5">Weet je een leegstaande hangar/magazijn/zaal... zijn? Ken je de eigenaar van zo'n pand? Ben je eigenaar van zo'n pand? Geef ons contactgegevens, adressen, gerust door via <a href="mailto:info@fietskeuken.org?SUBJECT=Oproep%20locatie">info@fietskeuken.org</a>.</p>
 						<p class="leading-relaxed mb-5">Het maakt niet uit of het een huur/koop/... pand is. We proberen zo veel mogelijk eigenaars te contacteren. Wie weet is er een regeling mogelijk die bij onze werking past. Handig om te weten:</p>
-						<ul class="list-disc mb-5">
+						<ul class="list-disc m-5">
 							<li>We blijven graag in de Brugse Poort, of toch zeker niet ver daar buiten.</li>
 							<li>We hebben liefst een ruimte van ca. 150m² nodig.</li>
 							<li>Een toilet, water- en een elektriciteitsaansluiting zijn ook nodig.</li>
