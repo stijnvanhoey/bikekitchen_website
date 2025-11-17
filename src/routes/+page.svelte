@@ -97,6 +97,35 @@
 			<div class="blog-post py-8 px-4">
 				<div class="h-full flex items-start">
 					<div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
+						<span class="text-darkgray pb-2 mb-2 border-b-2 border-darkgray">Okt</span>
+						<span class="font-medium text-lg text-lightgray leading-none title-font">2025</span>
+					</div>
+					<div class="flex-grow pl-6">
+						<p class="tracking-widest text-xs title-font font-medium text-gray">
+							FK Brugse Poort
+						</p>
+						<h2 class="title-font text-xl font-medium text-darkgray mb-3">
+							Update zoektocht nieuwe locatie Fietskeuken Brugse poort
+						</h2>
+						<p class="leading-relaxed mb-5">
+							De Fietskeuken in de Brugse Poort kan 1 jaar langer blijven in de ijdelijke invulling in de Meubelfabriek. MAAR dit is een harde deadline. Tegen 31 december 2026, moet de laagbouw, waar wij ons atelier hebben, leeggemaakt zijn. Er is geen kans meer op verlenging. In 2027 wordt deze laagbouw afgebroken, het dak is in slechte staat.
+						</p>
+						<p class="leading-relaxed mb-5">We zijn dus zeker dat wij een andere locatie moeten vinden. Dus graag nog eens een oproep.</p>
+						<p class="leading-relaxed mb-5">Weet je een leegstaande hangar/magazijn/zaal... zijn? Ken je de eigenaar van zo'n pand? Ben je eigenaar van zo'n pand? Geef ons contactgegevens, adressen, gerust door via <a href="mailto:info@fietskeuken.org?SUBJECT=Oproep%20locatie">info@fietskeuken.org</a>.</p>
+						<p class="leading-relaxed mb-5">Het maakt niet uit of het een huur/koop/... pand is. We proberen zo veel mogelijk eigenaars te contacteren. Wie weet is er een regeling mogelijk die bij onze werking past. Handig om te weten:</p>
+						<ul class="list-disc mb-5">
+							<li>We blijven graag in de Brugse Poort, of toch zeker niet ver daar buiten.</li>
+							<li>We hebben liefst een ruimte van ca. 150m² nodig.</li>
+							<li>Een toilet, water- en een elektriciteitsaansluiting zijn ook nodig.</li>
+						</ul>
+						<p class="leading-relaxed mb-5">Dank om mee uit te kijken.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="blog-post py-8 px-4">
+				<div class="h-full flex items-start">
+					<div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
 						<span class="text-darkgray pb-2 mb-2 border-b-2 border-darkgray">Jun</span>
 						<span class="font-medium text-lg text-lightgray leading-none title-font">2025</span>
 					</div>
@@ -117,7 +146,7 @@
 							Jullie zijn nog welkom tot eind 2025 in de Meubelfabriek, daarna stopt daar helaas de tijdelijke invulling en moet ook de Fietskeuken elders onderdak vinden...
 						</p>
 						<p class="leading-relaxed mb-5">
-							Hierbij dan ook een warme oproep: ken je een locatie in of nabij de Brugse Poort waar we onze werking kunnen verder zetten? Laat het ons dan weten! We zijn bereikbaar via <a href="mailto:info@fietskeuken.org"
+							Hierbij dan ook een warme oproep: ken je een locatie in of nabij de Brugse Poort waar we onze werking kunnen verder zetten? Laat het ons dan weten! We zijn bereikbaar via <br><a href="mailto:info@fietskeuken.org"
 							class="font-medium hover:underline break-all">info@fietskeuken.org.</a>
 						</p>
 						<p class="leading-relaxed mb-5">
