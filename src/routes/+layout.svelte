@@ -121,7 +121,7 @@
 			FK Brugse Poort - Fietskeuken Gent VZW<br>
 			Meibloemstraat 18, 9000 Gent<br>
 			Email: <a href="mailto:info@fietskeuken.org?SUBJECT=Vraag%20via%20website%20footer%20link">info@fietskeuken.org</a><br>
-			Ondernemingsnummer: BE 0834 610 269<br>
+			BTW-nummer: BE 0834 610 269<br>
 			Rekeningnummer: BE95 8939 4404 2158<br>
 			RPR, Ondernemingsrechtbank te Gent<br><br>
 		</p>
