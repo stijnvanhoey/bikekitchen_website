@@ -133,14 +133,6 @@
 			Rekeningnummer: BE90 3636 2351 5232<br>
 			Email: <a href="mailto:fietskeukenledeberg@gmail.com?SUBJECT=Vraag%20via%20website%20footer%20link">fietskeukenledeberg@gmail.com</a>
 		</p>
-		<p
-			class="text-sm text-lightgray sm:ml-4 sm:pl-4 lg:border-l lg:border-lightgray sm:py-2 sm:mt-0 mt-4"
-		>
-			FK Bloemekenswijk<br>
-			Jan Yoensplein, 9000 Gent<br>
-			Email: <a href="mailto:fietskeukenbloemekenswijk@gmail.com?SUBJECT=Vraag%20via%20website%20footer%20link">fietskeukenbloemekenswijk@gmail.com</a><br>
-			Rekeningnummer: BE13363186230239<br><small>(vermelding: "FK bloemekenswijk" bij storting)</small>
-		</p>
 		</div>
 		<p class="text-sm text-lightgray sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4 text-center"><a href="/privacy">Privacy beleid</a></p>
 		<p class="text-sm text-lightgray sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4 text-center">Logo Koen Degroote<br>Fotos Daan Van Hauwermeiren</p>
