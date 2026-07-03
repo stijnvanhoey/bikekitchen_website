@@ -1,6 +1,8 @@
 <script>
-	import '../app.postcss';
+	import '../app.css';
 	import logo from '$lib/static/img/logo_fk.webp';
+
+	let { children } = $props();
 
 	const navItems = [
 		{ label: 'Waar', href: '/#where' },
@@ -9,62 +11,47 @@
 		{ label: 'Contact', href: '/contact' }
 	];
 
-	// Show mobile icon and display menu
-	let showMobileMenu = false;
+	let showMobileMenu = $state(false);
 	const handleMobileIconClick = () => (showMobileMenu = !showMobileMenu);
-
 	const handleMobileSwitch = () => {
 		if (showMobileMenu) {
-			showMobileMenu = !showMobileMenu;
+			showMobileMenu = false;
 		}
 	};
 </script>
 
 <svelte:head>
-	<title>Fietskeuken Gent</title>
 	<link rel="icon" href="/img/favicon.ico" />
-
-	<meta
-		name="description"
-		content="Tijdens de RepareerBAaR van de Fietskeuken kunnen fietsliefhebbers vrijblijvend sleutelen met hulp van de vrijwilligers."
-	/>
-
-	<meta property="og:title" content="Fietskeuken Gent, in Ledeberg en de Brugse Poort" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://fietskeuken.org" />
-	<meta
-		property="og:description"
-		content="Tijdens de RepareerBAaR van de Fietskeuken kunnen fietsliefhebbers vrijblijvend sleutelen met hulp van de vrijwilligers."
-	/>
-	<meta property="og:image" content="https://www.fietskeuken.org/img/logo_fk.webp" />
-	<meta property="og:image:width" content="450" />
-	<meta property="og:image:height" content="450" />
-	<script data-goatcounter="https://fietskeuken.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+	<meta property="og:locale" content="nl_BE" />
+	<meta property="og:site_name" content="Fietskeuken Gent" />
+	<script
+		data-goatcounter="https://fietskeuken.goatcounter.com/count"
+		async
+		src="//gc.zgo.at/count.js"
+	></script>
 </svelte:head>
 
-<header
-	aria-label="Bike kitchen Ghent"
-	class="bg-white fixed top-0 left-0 right-0 z-10"
->
+<header aria-label="Fietskeuken Gent" class="fixed top-0 right-0 left-0 z-10 bg-white">
 	<nav
-		class="container mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 h-16 md:flex md:items-center md:justify-between"
-		aria-label="Site Nav"
+		class="mx-auto h-16 max-w-screen-xl px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8"
+		aria-label="Hoofdnavigatie"
 	>
-		<div class="flex items-center justify-between h-16">
-			<div class="flex-1 flex items-center gap-4">
-				<img src={logo} alt="Logo Fietskeuken" class="w-12 h-12" />
+		<div class="flex h-16 items-center justify-between">
+			<div class="flex flex-1 items-center gap-4">
+				<img src={logo} alt="Logo Fietskeuken" class="h-12 w-12" />
 				<a
 					href="/"
-					class="text-lg text-darkgray font-bold hover:text-lightgray"
-					on:click={handleMobileSwitch}>Fietskeuken Gent<span class="sr-only">Home</span></a
+					class="text-darkgray hover:text-lightgray text-lg font-bold"
+					onclick={handleMobileSwitch}>Fietskeuken Gent<span class="sr-only">Home</span></a
 				>
 			</div>
 			<div class="flex items-center gap-4 md:hidden">
 				<button
-					class="rounded bg-white p-2 text-darkgray transition hover:text-lightgray"
-					on:click={handleMobileIconClick}
-					aria-label="Menu toggle"
+					class="text-darkgray hover:text-lightgray rounded bg-white p-2 transition"
+					onclick={handleMobileIconClick}
+					aria-label="Menu, in-/uitklappen"
+					aria-expanded={showMobileMenu}
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -73,6 +60,8 @@
 						viewBox="0 0 24 24"
 						stroke="currentColor"
 						stroke-width="2"
+						aria-hidden="true"
+						focusable="false"
 					>
 						<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
 					</svg>
@@ -86,12 +75,12 @@
 				: 'hidden'}"
 		>
 			<ul class="items-center gap-6 text-sm {showMobileMenu ? 'flex-col' : 'flex'}">
-				{#each navItems as item}
+				{#each navItems as item (item.href)}
 					<li class="p-2">
 						<a
-							class="text-darkgray transition hover:text-lightgray font-medium text-lg"
+							class="text-darkgray hover:text-lightgray text-lg font-medium transition"
 							href={item.href}
-							on:click={handleMobileSwitch}
+							onclick={handleMobileSwitch}
 						>
 							{item.label}</a
 						>
@@ -103,68 +92,79 @@
 </header>
 
 <main class="relative pt-16">
-	<slot />
+	{@render children()}
 </main>
 
 <footer class="text-darkgray body-font">
-	<div class="container px-5 py-8 mx-auto flex items-center flex-col">
+	<div class="container mx-auto flex flex-col items-center px-5 py-8">
 		<div
-			class="flex title-font font-medium items-center md:justify-start justify-center text-darkgray"
+			class="title-font text-darkgray flex items-center justify-center font-medium md:justify-start"
 		>
-			<img src={logo} alt="Logo Fietskeuken" class="w-6 h-6" />
+			<img src={logo} alt="Logo Fietskeuken" class="h-6 w-6" />
 			<span class="ml-3 text-xl">Fietskeuken Gent</span>
 		</div>
-		<div class="container flex px-8 py-8  mx-auto justify-start lg:flex-row flex-col max-w-xs md:max-w-fit">
+		<div
+			class="container mx-auto flex max-w-xs flex-col justify-start px-8 py-8 md:max-w-fit lg:flex-row"
+		>
 			<p
-			class="text-sm text-lightgray sm:ml-4 sm:pl-4 lg:border-l lg:border-lightgray sm:py-2 sm:mt-0 mt-4"
-		>
-			FK Brugse Poort - Fietskeuken Gent VZW<br>
-			Meibloemstraat 18, 9000 Gent<br>
-			Email: <a href="mailto:info@fietskeuken.org?SUBJECT=Vraag%20via%20website%20footer%20link">info@fietskeuken.org</a><br>
-			BTW-nummer: BE 0834 610 269<br>
-			Rekeningnummer: BE95 8939 4404 2158<br>
-			RPR, Ondernemingsrechtbank te Gent<br><br>
-		</p>
-		<p
-			class="text-sm text-lightgray sm:ml-4 sm:pl-4 lg:border-l lg:border-lightgray sm:py-2 sm:mt-0 mt-4"
-		>
-			FK Ledeberg - Fietskeuken Ledeberg<br>
-			Standaertsite 1, 9050 Ledeberg<br>
-			Rekeningnummer: BE90 3636 2351 5232<br>
-			Email: <a href="mailto:fietskeukenledeberg@gmail.com?SUBJECT=Vraag%20via%20website%20footer%20link">fietskeukenledeberg@gmail.com</a>
-		</p>
+				class="text-lightgray mt-4 text-sm sm:mt-0 sm:ml-4 sm:py-2 sm:pl-4 lg:border-l lg:border-lightgray"
+			>
+				FK Brugse Poort - Fietskeuken Gent VZW<br />
+				Meibloemstraat 18, 9000 Gent<br />
+				Email:
+				<a href="mailto:info@fietskeuken.org?SUBJECT=Vraag%20via%20website%20footer%20link"
+					>info@fietskeuken.org</a
+				><br />
+				BTW-nummer: BE 0834 610 269<br />
+				Rekeningnummer: BE95 8939 4404 2158<br />
+				RPR, Ondernemingsrechtbank te Gent<br /><br />
+			</p>
+			<p
+				class="text-lightgray mt-4 text-sm sm:mt-0 sm:ml-4 sm:py-2 sm:pl-4 lg:border-l lg:border-lightgray"
+			>
+				FK Ledeberg - Fietskeuken Ledeberg<br />
+				Standaertsite 1, 9050 Ledeberg<br />
+				Rekeningnummer: BE90 3636 2351 5232<br />
+				Email:
+				<a href="mailto:fietskeukenledeberg@gmail.com?SUBJECT=Vraag%20via%20website%20footer%20link"
+					>fietskeukenledeberg@gmail.com</a
+				>
+			</p>
 		</div>
-		<p class="text-sm text-lightgray sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4 text-center"><a href="/privacy">Privacy beleid</a></p>
-		<p class="text-sm text-lightgray sm:ml-4 sm:pl-4 sm:py-2 sm:mt-0 mt-4 text-center">Logo Koen Degroote<br>Fotos Daan Van Hauwermeiren</p>
+		<p class="text-lightgray mt-4 text-center text-sm sm:mt-0 sm:ml-4 sm:py-2 sm:pl-4">
+			<a href="/privacy">Privacy beleid</a>
+		</p>
+		<p class="text-lightgray mt-4 text-center text-sm sm:mt-0 sm:ml-4 sm:py-2 sm:pl-4">
+			Logo Koen Degroote<br />Fotos Daan Van Hauwermeiren
+		</p>
 		<div class="items-center">
-			<span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+			<span class="mt-4 inline-flex justify-center sm:mt-0 sm:ml-auto sm:justify-start">
 				<a
-					class="ml-3 text-lightgray"
+					class="text-lightgray ml-3"
 					href="https://www.facebook.com/pages/Fietskeuken-Gent-Bike-kitchen-Ghent/150152548379572"
-					aria-label="Read more about the bike kitchen on Facebook"
+					aria-label="Fietskeuken Gent op Facebook"
 				>
 					<svg
-						class="w-5 h-5"
+						class="h-5 w-5"
 						viewBox="0 0 24 24"
 						width="24px"
 						height="24px"
-						id="icon_facebook"
 						fill="currentColor"
 						xmlns="http://www.w3.org/2000/svg"
-						><g id="SVGRepo_bgCarrier" stroke-width="0" />
-						<g id="SVGRepo_iconCarrier"
-							><path
-								fill-rule="evenodd"
-								clip-rule="evenodd"
-								d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.38823 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9165 4.6875 14.6576 4.6875C15.9705 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.3399 7.875 13.875 8.80001 13.875 9.74899V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z"
-							/></g
-						></svg
+						aria-hidden="true"
+						focusable="false"
 					>
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.38823 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9165 4.6875 14.6576 4.6875C15.9705 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.3399 7.875 13.875 8.80001 13.875 9.74899V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z"
+						/>
+					</svg>
 				</a>
 				<a
-					class="ml-3 text-lightgray"
+					class="text-lightgray ml-3"
 					href="https://github.com/stijnvanhoey/bikekitchen_website"
-					aria-label="Check out the source code of the bike kitchen on Github"
+					aria-label="Broncode van deze website op GitHub"
 				>
 					<svg
 						width="24px"
@@ -172,8 +172,9 @@
 						viewBox="0 0 24 24"
 						fill="currentColor"
 						xmlns="http://www.w3.org/2000/svg"
-						,=""
-						class="w-5 h-5"
+						class="h-5 w-5"
+						aria-hidden="true"
+						focusable="false"
 					>
 						<path
 							fill-rule="evenodd"
