@@ -10,10 +10,10 @@
 	<div class="flex h-full items-start">
 		<div class="flex w-12 flex-shrink-0 flex-col text-center leading-none">
 			<span class="text-darkgray border-darkgray mb-2 border-b-2 pb-2 capitalize">{month}</span>
-			<span class="text-lightgray text-lg leading-none font-medium">{year}</span>
+			<span class="text-semigray text-lg leading-none font-medium">{year}</span>
 		</div>
 		<div class="min-w-0 flex-grow pl-6 break-words">
-			<p class="text-xs font-medium tracking-widest text-gray-500 uppercase">{item.location}</p>
+			<p class="text-semigray text-xs font-medium tracking-widest uppercase">{item.location}</p>
 			<h3 class="text-darkgray mb-3 text-xl font-medium">{item.title}</h3>
 
 			{#if item.image}

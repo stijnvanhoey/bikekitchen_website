@@ -42,13 +42,13 @@
 				<img src={logo} alt="Logo Fietskeuken" class="h-12 w-12" />
 				<a
 					href="/"
-					class="text-darkgray hover:text-lightgray text-lg font-bold"
+					class="text-darkgray hover:text-semigray text-lg font-bold"
 					onclick={handleMobileSwitch}>Fietskeuken Gent<span class="sr-only">Home</span></a
 				>
 			</div>
 			<div class="flex items-center gap-4 md:hidden">
 				<button
-					class="text-darkgray hover:text-lightgray rounded bg-white p-2 transition"
+					class="text-darkgray hover:text-semigray rounded bg-white p-3 transition"
 					onclick={handleMobileIconClick}
 					aria-label="Menu, in-/uitklappen"
 					aria-expanded={showMobileMenu}
@@ -78,7 +78,7 @@
 				{#each navItems as item (item.href)}
 					<li class="p-2">
 						<a
-							class="text-darkgray hover:text-lightgray text-lg font-medium transition"
+							class="text-darkgray hover:text-semigray text-lg font-medium transition"
 							href={item.href}
 							onclick={handleMobileSwitch}
 						>
@@ -107,7 +107,7 @@
 			class="container mx-auto flex max-w-xs flex-col justify-start px-8 py-8 md:max-w-fit lg:flex-row"
 		>
 			<p
-				class="text-lightgray mt-4 text-sm sm:mt-0 sm:ml-4 sm:py-2 sm:pl-4 lg:border-l lg:border-lightgray"
+				class="text-semigray mt-4 text-sm sm:mt-0 sm:ml-4 sm:py-2 sm:pl-4 lg:border-l lg:border-lightgray"
 			>
 				FK Brugse Poort - Fietskeuken Gent VZW<br />
 				Meibloemstraat 18, 9000 Gent<br />
@@ -120,7 +120,7 @@
 				RPR, Ondernemingsrechtbank te Gent<br /><br />
 			</p>
 			<p
-				class="text-lightgray mt-4 text-sm sm:mt-0 sm:ml-4 sm:py-2 sm:pl-4 lg:border-l lg:border-lightgray"
+				class="text-semigray mt-4 text-sm sm:mt-0 sm:ml-4 sm:py-2 sm:pl-4 lg:border-l lg:border-lightgray"
 			>
 				FK Ledeberg - Fietskeuken Ledeberg<br />
 				Standaertsite 1, 9050 Ledeberg<br />
@@ -131,16 +131,16 @@
 				>
 			</p>
 		</div>
-		<p class="text-lightgray mt-4 text-center text-sm sm:mt-0 sm:ml-4 sm:py-2 sm:pl-4">
-			<a href="/privacy">Privacy beleid</a>
+		<p class="text-semigray mt-4 text-center text-sm sm:mt-0 sm:ml-4 sm:py-2 sm:pl-4">
+			<a href="/privacy" class="inline-block py-2">Privacy beleid</a>
 		</p>
-		<p class="text-lightgray mt-4 text-center text-sm sm:mt-0 sm:ml-4 sm:py-2 sm:pl-4">
+		<p class="text-semigray mt-4 text-center text-sm sm:mt-0 sm:ml-4 sm:py-2 sm:pl-4">
 			Logo Koen Degroote<br />Fotos Daan Van Hauwermeiren
 		</p>
 		<div class="items-center">
 			<span class="mt-4 inline-flex justify-center sm:mt-0 sm:ml-auto sm:justify-start">
 				<a
-					class="text-lightgray ml-3"
+					class="text-semigray ml-1 inline-flex items-center justify-center p-3"
 					href="https://www.facebook.com/pages/Fietskeuken-Gent-Bike-kitchen-Ghent/150152548379572"
 					aria-label="Fietskeuken Gent op Facebook"
 				>
@@ -162,7 +162,7 @@
 					</svg>
 				</a>
 				<a
-					class="text-lightgray ml-3"
+					class="text-semigray ml-1 inline-flex items-center justify-center p-3"
 					href="https://github.com/stijnvanhoey/bikekitchen_website"
 					aria-label="Broncode van deze website op GitHub"
 				>
