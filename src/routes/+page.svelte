@@ -1,300 +1,109 @@
 <script>
 	import FkHero from '$lib/components/FkHero.svelte';
-	import HeaderStyled from '../lib/components/HeaderStyled.svelte';
+	import SectionHeading from '$lib/components/SectionHeading.svelte';
+	import LocationCard from '$lib/components/LocationCard.svelte';
+	import NewsItem from '$lib/components/NewsItem.svelte';
+	import { newsItems } from '$lib/data/news.js';
 	import homeImg from '$lib/static/img/home-bg.webp';
-	import velocityImg from '$lib/static/img/2024_velofestival.jpg';
+
+	const description =
+		'Tijdens de RepareerBAaR van de Fietskeuken kunnen fietsliefhebbers vrijblijvend sleutelen met hulp van de vrijwilligers.';
+
+	// keep these opening hours in sync with the LocationCard content below — manual step
+	const localBusinessJsonLd = JSON.stringify([
+		{
+			'@context': 'https://schema.org',
+			'@type': 'LocalBusiness',
+			name: 'Fietskeuken Gent - Brugse Poort',
+			address: {
+				'@type': 'PostalAddress',
+				streetAddress: 'Meibloemstraat 18',
+				postalCode: '9000',
+				addressLocality: 'Gent',
+				addressCountry: 'BE'
+			},
+			openingHoursSpecification: {
+				'@type': 'OpeningHoursSpecification',
+				dayOfWeek: 'Thursday',
+				opens: '16:00',
+				closes: '21:30'
+			}
+		},
+		{
+			'@context': 'https://schema.org',
+			'@type': 'LocalBusiness',
+			name: 'Fietskeuken Ledeberg',
+			address: {
+				'@type': 'PostalAddress',
+				streetAddress: 'Standaertsite 1',
+				postalCode: '9050',
+				addressLocality: 'Ledeberg',
+				addressCountry: 'BE'
+			},
+			openingHoursSpecification: {
+				'@type': 'OpeningHoursSpecification',
+				dayOfWeek: 'Wednesday',
+				opens: '18:30',
+				closes: '21:00'
+			}
+		}
+	]);
 </script>
 
 <svelte:head>
-	<title>Homepage Bikekitchen Ghent</title>
+	<title>Fietskeuken Gent</title>
+	<meta name="description" content={description} />
+	<link rel="canonical" href="https://fietskeuken.org/" />
+	<meta property="og:title" content="Fietskeuken Gent, in Ledeberg en de Brugse Poort" />
+	<meta property="og:description" content={description} />
+	<meta property="og:url" content="https://fietskeuken.org" />
+	<meta property="og:image" content="https://www.fietskeuken.org/img/logo_fk.webp" />
+	<meta property="og:image:width" content="450" />
+	<meta property="og:image:height" content="450" />
+
+	{@html '<' + 'script type="application/ld+json">' + localBusinessJsonLd + '<' + '/script>'}
 </svelte:head>
 
 <FkHero imgUrl={homeImg} header="Fietskeuken Gent" subheader="Bike repair and food" />
 
-
 <section id="where" class="text-lightgray bg-darkgray body-font pt-8">
-	<div class="container px-5 py-12 mx-auto max-w-screen-lg">
-		<div class="flex flex-wrap gap-2 place-content-around">
-			<div
-				class="flex flex-col items-center justify-center px-4 py-4 shadow-lg shadow-neutral-900"
-			>
-				<div class="w-32 h-32 bg-white rounded-full flex items-center justify-center text-gray-500">
-					<svg class="w-24" fill="currentColor" version="1.1" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
-						<g>
-						 <path d="m635.33 460.93h-0.91016l-0.91016 0.16797c-0.50391 0.085938-19.246 3.4805-55.488 12.383-0.15625 0-0.28906 0.011719-0.44531 0.011719-94.02 0-175.27-97.465-208.59-155.32-38.363-66.648-47.664-116.1-47.746-116.58l-1.5586-8.6406h-32.375c12.469-4.1992 21.492-15.984 21.492-29.844l-0.003906-44.809c0-17.363-14.137-31.5-31.5-31.5h-30.816c-17.363 0-31.5 14.137-31.5 31.5v44.797c0 13.859 9.0234 25.656 21.492 29.844h-4.6914c-17.363 0-31.5 14.125-31.5 31.5v72.793c0 10.812 5.4844 20.363 13.801 26.039l0.011719 0.011719c4.2734 3.4922 11.375 5.4492 11.375 5.4492 39.109 0 54.359 4.9219 57.215 6 58.297 40.477 91.789 105.86 100.39 195.23-46.391 15.086-99.012 33.191-157.74 54.828l0.035156 0.070313c-25.43 9.7695-43.523 34.43-43.523 63.254 0 37.332 30.371 67.727 67.727 67.727 26.328 0 49.176-15.109 60.371-37.094 5.0898-1.1055 31.57-6.6719 69.469-12.996-2.3047 18.301-5.2422 37.211-8.9141 56.797-0.86328 4.6094-1.5859 8.4375-2.0898 11.398-7.4531 44.102-6.1211 74.578-5.9141 78.348v228.25h-0.21484v21h62.699v-281.9c17.148-24.254 32.102-40.512 32.375-40.812l0.23828-0.25391c68.27-78.602 162.31-92.027 165.95-92.52 1.7891-0.16797 3.6016-0.32422 5.4102-0.46875 7.3203 0.35938 14.508 0.86328 21.504 1.5234 3.7422 0.49219 97.488 13.715 165.95 92.52l0.23828 0.25391c0.15625 0.17969 14.879 16.117 31.836 39.984v282.74h21v-1.0547h21v1.0547h21l0.003906-249.59c-0.011719-3.5625-0.66016-88.355-34.309-174.6-45.336-116.12-128.95-177.5-241.85-177.5zm-399.35-342.62c0-5.7852 4.7148-10.5 10.5-10.5h30.816c5.7852 0 10.5 4.7148 10.5 10.5v44.797c0 5.7852-4.7148 10.5-10.5 10.5h-30.816c-5.7852 0-10.5-4.7148-10.5-10.5zm57.754 198.55-1.1172-0.67188c-2.4258-1.2617-15.492-7.0078-52.789-8.2188h-0.085937-0.15625c-1.3438-0.046875-2.7109-0.085938-4.1055-0.12109-6.2773-0.32422-8.543-1.3438-8.543-1.3438-3.3359-1.7539-5.6641-5.2305-5.6641-9.2539v-72.793c0-5.7852 4.7148-10.5 10.5-10.5h70.703c4.3438 17.629 17.09 60.492 48.301 114.7 36.336 63.121 100.84 134.65 176.52 158-33.469 9.1211-74.699 21.121-123.47 36.648-10.301-93.848-47.273-163.27-110.09-206.45zm-44.145 377.99c-25.754 0-46.727-20.965-46.727-46.727 0-25.766 20.965-46.738 46.727-46.738 25.766 0 46.727 20.965 46.727 46.738-0.011718 25.762-20.965 46.727-46.727 46.727zm192.25 29.844c-2.0039 2.1719-18.973 20.746-37.512 47.711v0.73047h-0.34766v267.45h-20.473v-178.47l-0.20312 0.3125v-58.539c-0.058594-11.531 0.61328-35.555 5.8203-66.406 0.49219-2.8555 1.1875-6.5742 2.0273-11.027 2.6641-14.195 6.875-36.719 10.262-64.223 43.105-6.6953 96.406-13.441 148.97-16.176-33.566 14.516-73.789 38.695-108.54 78.645zm448.64 315.88h-21v-266.27l0.49219-0.33594c-18.875-27.516-36.059-46.32-37.824-48.238-74.746-85.945-175.04-98.977-179.27-99.48l-0.27734-0.035156c-121.25-11.438-288.95 20.102-335.73 29.641 0.27734-2.5312 0.44531-5.1133 0.44531-7.7266 0-26.555-15.348-49.57-37.656-60.672 222.79-79.43 345.16-103.37 356.64-105.53 104.29 0.33594 178.7 55.379 221.12 163.64 32.375 82.621 33.07 166.69 33.07 167.5v227.5z"/>
-						 <path d="m925.14 915.45h21v101.32h-21z"/>
-						 <path d="m637 485.77c-35.027 0-63.516 28.488-63.516 63.516 0 35.027 28.488 63.527 63.516 63.527s63.527-28.5 63.527-63.527c0-35.027-28.5-63.516-63.527-63.516zm0 106.04c-23.438 0-42.516-19.078-42.516-42.527 0-23.449 19.078-42.516 42.516-42.516 23.449 0 42.527 19.066 42.527 42.516 0 23.445-19.078 42.527-42.527 42.527z"/>
-						 <path d="m843.68 643.93c0 14.453-11.719 26.172-26.172 26.172s-26.172-11.719-26.172-26.172c0-14.457 11.719-26.172 26.172-26.172s26.172 11.715 26.172 26.172"/>
-						 <path d="m798.36 891.46c-10.848-1.9453-21.707-1.3086-30.203-0.097656v-1.668l-13.5 4.4141c-1.6797 0.45703-2.6875 0.78125-2.8672 0.83984l0.023438 0.097657-58.211 19.078v110.18l53.867 18.156 0.023438-0.058594c4.2227 45.359 50.426 66.098 75.422 70.777l3.8867-20.641c-2.1953-0.42187-49.738-9.9727-57.562-46.379h12.035c37.246 0 50.184-25.262 51.816-38.629l0.085937-0.63672v-62.594c0.019531-29.504-5.6797-47.613-34.816-52.844zm-83.746 37.895 32.555-10.68v101.52l-32.555-10.969zm97.582 76.129c-0.58984 3.168-4.8594 19.691-30.898 19.691h-13.129v-112.52c7.0781-1.2461 16.98-2.2305 26.496-0.51563 12.469 2.2422 17.531 4.2617 17.531 32.195z"/>
-						 <path d="m327.86 914.39h21v101.33h-21z"/>
-						 <path d="m522.21 893.9c-0.19141-0.058594-1.2109-0.38281-2.8672-0.82812l-13.5-4.4297v1.6797c-8.5078-1.2344-19.344-1.8594-30.215 0.085937-29.125 5.2422-34.812 23.34-34.812 52.859v61.957l0.085938 1.2617c1.6328 13.355 14.566 38.629 51.816 38.629h12.035c-7.8359 36.422-55.367 45.973-57.574 46.391l1.957 10.309 1.9453 10.309c24.996-4.6797 71.207-25.414 75.406-70.777l0.023437 0.070313 53.867-18.168v-110.17l-58.203-19.078zm-29.496 130.21c-25.715 0-30.254-16.332-30.898-19.727v-61.129c0-27.926 5.0625-29.953 17.531-32.195 9.5508-1.7148 19.43-0.74219 26.496 0.51562v112.52h-13.129zm34.117-106.49 32.543 10.68v79.871l-32.543 10.969z"/>
-						</g>
-					</svg>
-				</div>
-				<h2 class="text-2xl text-white font-extrabold m-4">FK Brugse Poort</h2>
-				<p class="text-xl my-1 text-center">Heel vaak open op<br>donderdag van 16:00 - 21:30</p>
-				<p class="text-sm mb-8 text-center">Om helemaal zeker te zijn, check <a href="https://www.facebook.com/FietskeukenGent" class="underline">Facebook</a></p>
+	<div class="container mx-auto max-w-screen-lg px-5 py-12">
+		<div class="flex flex-wrap place-content-around gap-2">
+			<LocationCard variant="brugse-poort" name="FK Brugse Poort">
+				<p class="my-1 text-center text-xl">Heel vaak open op<br />donderdag van 16:00 - 21:30</p>
+				<p class="mb-8 text-center text-sm">
+					Om helemaal zeker te zijn, check
+					<a href="https://www.facebook.com/FietskeukenGent" class="underline">Facebook</a>
+				</p>
 				<a href="https://goo.gl/maps/jufjmNWP3hALfHmf6" class="text-center">
-					<p class="leading-loose font-bold text-lg">Meubelfabriek</p>
+					<p class="text-lg leading-loose font-bold">Meubelfabriek</p>
 					<p>Meibloemstraat 18</p>
 					<p>9000 Gent</p>
 				</a>
-			</div>
-			<div
-				class="flex flex-col items-center justify-center px-4 py-4 shadow-lg shadow-neutral-900"
-			>
-				<div class="w-32 h-32 bg-white rounded-full flex items-center justify-center text-gray-500">
-					<svg class="w-24" fill="currentColor" version="1.1" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
-						<g>
-							<path d="m600 493.07c-59.062 0-106.95 47.867-106.95 106.93 0 59.062 47.879 106.95 106.95 106.95 59.062 0 106.93-47.879 106.93-106.95 0-59.062-47.871-106.93-106.93-106.93zm0 192.88c-47.387 0-85.945-38.555-85.945-85.945 0-47.387 38.555-85.934 85.945-85.934 47.387 0 85.934 38.543 85.934 85.934 0 47.387-38.547 85.945-85.934 85.945z"/>
-							<path d="m979.39 600c0-27.926 21.805-50.746 49.32-52.391-2.6172-21.637-6.8164-42.758-12.516-63.277-5.6641 1.9688-11.461 2.9023-17.172 2.9023-20.605 0-40.152-12.203-48.516-32.41-10.703-25.812 0.74219-55.262 25.547-67.297-10.645-18.781-22.633-36.719-35.867-53.617-9.9102 8.7969-22.355 13.199-34.812 13.199-13.43 0-26.855-5.125-37.105-15.359-19.754-19.754-20.473-51.312-2.1836-71.93-16.895-13.246-34.812-25.234-53.617-35.867-8.9648 18.504-27.625 29.566-47.23 29.566-6.707 0-13.5-1.2852-20.074-4.0078-25.812-10.703-38.555-39.625-29.508-65.699-20.52-5.6875-41.652-9.8984-63.277-12.516-1.6445 27.516-24.469 49.32-52.391 49.32-27.926 0-50.746-21.805-52.391-49.32-21.637 2.6172-42.758 6.8281-63.277 12.516 9.0586 26.074-3.6953 54.996-29.508 65.699-6.5742 2.7227-13.379 4.0078-20.074 4.0078-19.609 0-38.258-11.062-47.23-29.566-18.793 10.645-36.719 22.633-53.617 35.867 18.289 20.617 17.566 52.188-2.1836 71.93-10.246 10.246-23.676 15.359-37.117 15.359-12.445 0-24.887-4.3906-34.801-13.199-13.246 16.895-25.234 34.824-35.867 53.617 24.805 12.035 36.254 41.484 25.547 67.297-8.3633 20.219-27.91 32.41-48.516 32.41-5.7227 0-11.508-0.9375-17.172-2.9023-5.6992 20.52-9.8984 41.652-12.516 63.277 27.516 1.6445 49.32 24.469 49.32 52.391 0 27.926-21.805 50.746-49.32 52.391 2.6172 21.637 6.8164 42.758 12.516 63.277 5.6641-1.9688 11.461-2.9023 17.172-2.9023 20.605 0 40.152 12.203 48.516 32.41 10.703 25.812-0.74219 55.262-25.547 67.297 10.645 18.793 22.633 36.719 35.867 53.617 9.9102-8.7852 22.355-13.199 34.812-13.199 13.43 0 26.855 5.125 37.105 15.371 19.754 19.754 20.473 51.301 2.1836 71.914 16.895 13.246 34.812 25.234 53.617 35.867 8.9766-18.504 27.625-29.555 47.23-29.555 6.707 0 13.5 1.2852 20.074 4.0078 25.812 10.691 38.555 39.625 29.508 65.688 20.52 5.6992 41.652 9.8984 63.277 12.516 1.6445-27.516 24.469-49.32 52.391-49.32 27.926 0 50.746 21.805 52.391 49.32 21.637-2.6172 42.758-6.8164 63.277-12.516-9.0586-26.062 3.6953-54.996 29.508-65.688 6.5742-2.7227 13.379-4.0078 20.074-4.0078 19.609 0 38.258 11.051 47.23 29.555 18.793-10.645 36.719-22.633 53.617-35.867-18.289-20.617-17.566-52.176 2.1836-71.914 10.246-10.246 23.676-15.371 37.117-15.371 12.445 0 24.887 4.3906 34.801 13.199 13.246-16.895 25.234-34.812 35.867-53.617-24.805-12.035-36.254-41.484-25.547-67.297 8.3633-20.219 27.91-32.41 48.516-32.41 5.7227 0 11.508 0.9375 17.172 2.9023 5.6992-20.52 9.8984-41.652 12.516-63.277-27.504-1.6445-49.32-24.465-49.32-52.391zm21.195 91.789c-0.51563-0.011718-1.0312-0.023437-1.5469-0.023437-29.832 0-56.496 17.809-67.922 45.383-11.855 28.621-4.2461 60.742 17.016 81.168-4.2109 6.7188-8.6289 13.309-13.211 19.754-9.2383-4.043-19.273-6.1797-29.531-6.1797-19.645 0-38.09 7.6445-51.973 21.516-21.887 21.898-27.168 54.48-15.336 81.504-6.457 4.5977-13.066 9.0117-19.789 13.246-13.68-14.184-32.832-22.656-53.027-22.656-9.6719 0-19.129 1.8828-28.105 5.6055-28.645 11.867-45.984 39.961-45.371 69.469-7.7148 1.7539-15.492 3.2891-23.293 4.6094-10.738-27.48-37.512-46.789-68.484-46.789-30.973 0-57.742 19.309-68.484 46.789-7.8008-1.3086-15.59-2.8438-23.305-4.6094 0.625-29.508-16.727-57.613-45.359-69.469-8.9766-3.7188-18.434-5.6055-28.105-5.6055-20.195 0-39.348 8.4727-53.027 22.656-6.7305-4.2344-13.332-8.6523-19.789-13.246 11.82-27.023 6.5508-59.605-15.336-81.504-13.883-13.871-32.328-21.516-51.961-21.516-10.262 0-20.305 2.1367-29.543 6.1797-4.5859-6.4453-8.9883-13.043-13.211-19.754 21.277-20.426 28.871-52.547 17.016-81.168-11.41-27.574-38.074-45.383-67.922-45.383-0.51562 0-1.0312 0.011719-1.5469 0.023437-1.7539-7.7266-3.2891-15.504-4.6094-23.305 27.48-10.738 46.789-37.512 46.789-68.484s-19.309-57.742-46.789-68.484c1.3086-7.8008 2.8438-15.59 4.6094-23.305 0.51562 0.011718 1.0312 0.023437 1.5469 0.023437 29.844 0 56.496-17.809 67.922-45.383 11.855-28.621 4.2461-60.742-17.016-81.168 4.2109-6.7188 8.6289-13.309 13.211-19.754 9.2383 4.043 19.273 6.1797 29.531 6.1797 19.633 0 38.09-7.6445 51.973-21.516 21.887-21.898 27.168-54.48 15.336-81.492 6.457-4.6094 13.066-9.0234 19.789-13.246 13.68 14.184 32.832 22.668 53.027 22.668 9.6719 0 19.129-1.8828 28.105-5.6172 28.645-11.855 45.984-39.961 45.371-69.469 7.7148-1.7539 15.492-3.2891 23.293-4.6094 10.738 27.48 37.512 46.789 68.484 46.789 30.973 0 57.742-19.309 68.484-46.789 7.8008 1.3086 15.59 2.8438 23.305 4.6094-0.625 29.508 16.727 57.613 45.359 69.469 8.9766 3.7305 18.434 5.6172 28.105 5.6172 20.195 0 39.348-8.4727 53.027-22.656 6.7305 4.2227 13.332 8.6406 19.789 13.246-11.82 27.012-6.5508 59.594 15.336 81.492 13.883 13.871 32.328 21.516 51.961 21.516 10.262 0 20.305-2.1367 29.543-6.1797 4.5859 6.4453 9 13.043 13.211 19.754-21.277 20.426-28.871 52.547-17.016 81.168 11.426 27.574 38.074 45.383 67.922 45.383 0.51563 0 1.0312-0.011719 1.5469-0.023438 1.7539 7.7266 3.2891 15.504 4.6094 23.305-27.48 10.738-46.789 37.512-46.789 68.484 0 30.973 19.309 57.742 46.789 68.484-1.3242 7.7891-2.8594 15.574-4.6094 23.293z"/>
-							<path d="m933.53 559.25c-2.0391-16.824-5.3164-33.266-9.7422-49.234-4.4023 1.5234-8.9141 2.2578-13.355 2.2578-16.031 0-31.234-9.4922-37.754-25.223-8.3164-20.09 0.57422-42.996 19.871-52.355-8.2695-14.617-17.605-28.559-27.898-41.711-7.7148 6.8398-17.398 10.273-27.086 10.273-10.453 0-20.891-3.9844-28.871-11.965-15.359-15.359-15.91-39.91-1.6914-55.957-13.152-10.297-27.098-19.633-41.711-27.898-6.9844 14.387-21.492 23.004-36.742 23.004-5.207 0-10.5-1.0078-15.613-3.1328-20.09-8.3164-30-30.816-22.957-51.098-15.961-4.4297-32.398-7.7148-49.234-9.7422-1.2617 21.414-19.012 38.383-40.742 38.383s-39.48-16.969-40.754-38.363c-16.824 2.0273-33.266 5.3047-49.234 9.7422 7.043 20.27-2.8672 42.77-22.957 51.098-5.1133 2.125-10.402 3.1211-15.613 3.1211-15.254 0-29.762-8.6055-36.742-22.992-14.617 8.2695-28.559 17.605-41.711 27.898 14.23 16.043 13.68 40.598-1.6914 55.957-7.9805 7.9688-18.422 11.965-28.871 11.965-9.6836 0-19.367-3.4336-27.086-10.273-10.297 13.152-19.633 27.098-27.898 41.711 19.297 9.3594 28.199 32.27 19.871 52.355-6.5156 15.73-21.719 25.223-37.754 25.223-4.4414 0-8.9531-0.74219-13.355-2.2578-4.4141 15.961-7.7031 32.398-9.7422 49.234 21.406 1.2734 38.375 19.031 38.375 40.754 0 21.719-16.969 39.48-38.375 40.754 2.0391 16.824 5.3164 33.266 9.7422 49.234 4.4023-1.5234 8.9141-2.2578 13.355-2.2578 16.031 0 31.234 9.4922 37.754 25.223 8.3164 20.09-0.57422 42.996-19.871 52.355 8.2695 14.617 17.605 28.559 27.898 41.711 7.7148-6.8398 17.398-10.262 27.086-10.262 10.453 0 20.891 3.9844 28.871 11.953 15.359 15.359 15.91 39.91 1.6914 55.957 13.152 10.297 27.098 19.633 41.711 27.898 6.9844-14.387 21.492-22.992 36.742-22.992 5.207 0 10.5 0.99609 15.613 3.1211 20.09 8.3164 30 30.816 22.957 51.109 15.961 4.4141 32.398 7.7031 49.234 9.7422 1.2734-21.406 19.031-38.375 40.754-38.375 21.719 0 39.48 16.969 40.754 38.375 16.824-2.0391 33.266-5.3164 49.234-9.7422-7.043-20.281 2.8672-42.781 22.957-51.109 5.1133-2.125 10.402-3.1211 15.613-3.1211 15.254 0 29.762 8.6055 36.742 22.992 14.617-8.2695 28.559-17.605 41.711-27.898-14.23-16.043-13.68-40.598 1.6914-55.957 7.9688-7.9688 18.422-11.953 28.871-11.953 9.6836 0 19.367 3.4219 27.086 10.262 10.297-13.152 19.633-27.098 27.898-41.711-19.297-9.3594-28.199-32.27-19.871-52.355 6.5156-15.73 21.719-25.223 37.754-25.223 4.4414 0 8.9531 0.74219 13.355 2.2578 4.4141-15.961 7.7031-32.398 9.7422-49.234-21.418-1.293-38.387-19.043-38.387-40.773s16.969-39.48 38.375-40.754zm-23.543 96.867c-0.63672 3.5742-1.332 7.1289-2.1133 10.68-24.059 0.97266-45.312 15.73-54.602 38.137-9.457 22.824-4.1992 48.301 11.641 65.543-1.9688 3.0469-3.9961 6.0703-6.0586 9.0469-6.7578-2.4727-13.957-3.7578-21.277-3.7578-16.512 0-32.039 6.4336-43.727 18.109-17.473 17.473-22.355 43.02-14.34 65.004-2.9883 2.0742-6.0234 4.1055-9.0977 6.0859-11.258-10.297-26.184-16.367-41.855-16.367-8.1367 0-16.094 1.5859-23.641 4.7148-22.848 9.4688-37.164 31.211-38.137 54.602-3.5508 0.76953-7.1055 1.4766-10.68 2.1133-9.8633-21.227-31.391-35.832-56.113-35.832-24.719 0-46.246 14.617-56.113 35.832-3.5742-0.63672-7.1289-1.332-10.68-2.1133-0.98438-23.387-15.277-45.133-38.125-54.602-7.5586-3.1328-15.516-4.7148-23.652-4.7148-15.684 0-30.613 6.0703-41.855 16.367-3.0703-1.9805-6.1094-4.0078-9.0977-6.0859 8.0273-21.984 3.1328-47.531-14.34-65.004-11.688-11.676-27.215-18.109-43.727-18.109-7.3203 0-14.52 1.2852-21.277 3.7578-2.0625-2.9766-4.0938-6-6.0586-9.0469 15.828-17.242 21.098-42.719 11.641-65.543-9.2773-22.402-30.539-37.164-54.602-38.137-0.76953-3.5508-1.4766-7.1055-2.1133-10.68 21.227-9.8516 35.832-31.391 35.832-56.113 0-24.719-14.617-46.246-35.832-56.113 0.63672-3.5742 1.332-7.1289 2.1133-10.68 24.059-0.97266 45.312-15.73 54.602-38.137 9.457-22.824 4.1992-48.301-11.641-65.543 1.9688-3.0469 3.9844-6.0703 6.0586-9.0469 6.7578 2.4727 13.957 3.7578 21.277 3.7578 16.512 0 32.039-6.4336 43.727-18.109 17.473-17.473 22.367-43.02 14.34-65.004 2.9883-2.0742 6.0234-4.1055 9.0977-6.0859 11.258 10.309 26.184 16.367 41.855 16.367 8.1367 0 16.094-1.5859 23.641-4.7148 22.848-9.4688 37.164-31.211 38.137-54.602 3.5508-0.75781 7.1055-1.4648 10.68-2.1133 9.8516 21.227 31.391 35.832 56.113 35.832 24.719 0 46.246-14.617 56.113-35.832 3.5742 0.64844 7.1289 1.3438 10.68 2.1133 0.98438 23.387 15.277 45.133 38.125 54.602 7.5586 3.1328 15.516 4.7266 23.652 4.7266 15.684 0 30.613-6.0703 41.855-16.379 3.0703 1.9805 6.1094 4.0078 9.0977 6.0859-8.0156 21.984-3.1328 47.531 14.34 65.004 11.676 11.676 27.215 18.109 43.727 18.109 7.3203 0 14.52-1.2852 21.277-3.7578 2.0625 2.9766 4.0938 6 6.0586 9.0469-15.84 17.242-21.098 42.719-11.641 65.543 9.2773 22.402 30.539 37.164 54.602 38.137 0.76953 3.5508 1.4766 7.1055 2.1133 10.68-21.227 9.8516-35.832 31.391-35.832 56.113 0 24.719 14.605 46.246 35.832 56.113z"/>
-							<path d="m828.53 572.07c-1.3906-11.531-3.6484-22.789-6.6836-33.742-3.0117 1.0547-6.1094 1.5469-9.1562 1.5469-10.98 0-21.395-6.4922-25.859-17.27-5.6992-13.754 0.39453-29.461 13.633-35.867-5.6758-10.02-12.07-19.57-19.129-28.586-5.2812 4.7031-11.914 7.043-18.562 7.043-7.1523 0-14.305-2.7344-19.777-8.1953-10.523-10.535-10.895-27.348-1.1523-38.34-9.0117-7.0547-18.562-13.441-28.586-19.117-4.7773 9.8516-14.734 15.742-25.176 15.742-3.5742 0-7.1992-0.69531-10.703-2.1367-13.766-5.7109-20.555-21.121-15.73-35.016-10.945-3.0352-22.211-5.2695-33.742-6.6719-0.86328 14.664-13.043 26.281-27.926 26.281-14.879 0-27.059-11.629-27.926-26.281-11.531 1.3906-22.789 3.6367-33.742 6.6719 4.8242 13.895-1.957 29.305-15.73 35.016-3.5039 1.4414-7.1289 2.1367-10.703 2.1367-10.441 0-20.387-5.8906-25.176-15.742-10.02 5.6758-19.57 12.059-28.586 19.117 9.7422 10.992 9.3711 27.805-1.1641 38.34-5.4609 5.4609-12.625 8.1953-19.777 8.1953-6.6367 0-13.262-2.3398-18.551-7.043-7.0547 9.0117-13.453 18.562-19.129 28.586 13.234 6.4062 19.32 22.117 13.633 35.867-4.4648 10.766-14.879 17.27-25.859 17.27-3.0469 0-6.1445-0.49219-9.1562-1.5469-3.0352 10.945-5.2812 22.211-6.6836 33.742 14.676 0.86328 26.293 13.043 26.293 27.926 0 14.879-11.629 27.059-26.293 27.926 1.3906 11.531 3.6484 22.789 6.6836 33.742 3.0117-1.0547 6.1094-1.5469 9.1562-1.5469 10.98 0 21.395 6.4922 25.859 17.27 5.6992 13.754-0.39453 29.461-13.633 35.867 5.6758 10.02 12.07 19.57 19.129 28.586 5.2812-4.7031 11.914-7.043 18.551-7.043 7.1641 0 14.316 2.7344 19.777 8.1953 10.535 10.535 10.906 27.348 1.1641 38.34 9.0117 7.0547 18.562 13.453 28.586 19.129 4.7773-9.8633 14.734-15.758 25.176-15.758 3.5742 0 7.1992 0.69531 10.703 2.1367 13.766 5.7109 20.555 21.133 15.73 35.016 10.945 3.0352 22.211 5.2812 33.742 6.6836 0.86328-14.676 13.043-26.293 27.926-26.293 14.879 0 27.059 11.629 27.926 26.293 11.531-1.3906 22.789-3.6484 33.742-6.6836-4.8242-13.883 1.957-29.305 15.73-35.016 3.5039-1.4414 7.1289-2.1367 10.703-2.1367 10.441 0 20.387 5.8906 25.176 15.758 10.02-5.6758 19.57-12.07 28.586-19.129-9.7422-10.992-9.3711-27.805 1.1523-38.34 5.4727-5.4609 12.637-8.1953 19.777-8.1953 6.6484 0 13.273 2.3398 18.562 7.043 7.0547-9.0117 13.453-18.562 19.129-28.586-13.234-6.4062-19.32-22.117-13.633-35.867 4.4648-10.766 14.879-17.27 25.859-17.27 3.0469 0 6.1445 0.49219 9.1562 1.5469 3.0352-10.945 5.2812-22.211 6.6836-33.742-14.676-0.86328-26.293-13.043-26.293-27.926 0-14.879 11.617-27.059 26.293-27.926zm-47.293 27.926c0 16.57 8.293 31.332 21.047 40.223-15.504 3.3477-28.598 14.051-34.836 29.137-6.3477 15.312-4.332 32.148 4.0547 45.238-2.8555-0.51562-5.7617-0.78125-8.7227-0.78125-13.078 0-25.367 5.1016-34.633 14.34-11.734 11.746-16.309 28.094-13.535 43.402-7.7891-5.0156-16.98-7.8477-26.52-7.8477-6.4453 0-12.742 1.2461-18.742 3.7422-15.324 6.3477-25.789 19.68-29.113 34.859-8.8789-12.758-23.664-21.07-40.246-21.07-16.586 0-31.355 8.3047-40.246 21.07-3.3125-15.191-13.777-28.512-29.113-34.859-5.9883-2.4844-12.289-3.7422-18.742-3.7422-9.5391 0-18.73 2.832-26.52 7.8477 2.7734-15.312-1.8008-31.668-13.535-43.402-9.2539-9.2539-21.551-14.34-34.645-14.34-2.9414 0-5.8438 0.26562-8.7109 0.78125 8.3867-13.094 10.402-29.902 4.0547-45.238-6.2539-15.086-19.332-25.777-34.836-29.137 12.742-8.8789 21.047-23.652 21.047-40.223s-8.293-31.332-21.047-40.223c15.504-3.3477 28.598-14.051 34.836-29.137 6.3477-15.312 4.332-32.148-4.0547-45.238 2.8555 0.51562 5.7617 0.78125 8.7109 0.78125 13.094 0 25.379-5.1016 34.645-14.34 11.734-11.746 16.309-28.094 13.535-43.402 7.7891 5.0156 16.98 7.8477 26.52 7.8477 6.4453 0 12.742-1.2461 18.742-3.7422 15.324-6.3477 25.789-19.68 29.113-34.848 8.8789 12.742 23.664 21.059 40.246 21.059 16.586 0 31.355-8.3047 40.246-21.059 3.3125 15.18 13.777 28.5 29.113 34.848 5.9883 2.4844 12.289 3.7422 18.742 3.7422 9.5391 0 18.73-2.832 26.52-7.8477-2.7734 15.312 1.8008 31.668 13.535 43.402 9.2539 9.2539 21.551 14.34 34.633 14.34 2.9531 0 5.8555-0.26562 8.7227-0.78125-8.3867 13.094-10.402 29.902-4.0547 45.238 6.2539 15.086 19.332 25.777 34.836 29.137-12.754 8.8906-21.047 23.652-21.047 40.223z"/>
-						</g>
-					</svg>
-				</div>
-				<h2 class="text-2xl text-white font-extrabold m-4">FK Ledeberg</h2>
-				<p class="text-xl my-4">Woensdag: 18u30	- 21u</p>
-				<p class="text-sm mb-8 text-center">Voor up to date info, check <a href="https://www.facebook.com/fietskeukenledeberg" class="underline">Facebook</a></p>
+			</LocationCard>
+			<LocationCard variant="ledeberg" name="FK Ledeberg">
+				<p class="my-4 text-xl">Woensdag: 18u30 - 21u</p>
+				<p class="mb-8 text-center text-sm">
+					Voor up to date info, check
+					<a href="https://www.facebook.com/fietskeukenledeberg" class="underline">Facebook</a>
+				</p>
 				<a href="https://goo.gl/maps/Y75sUcsPnFZaHzJb8" class="text-center">
-					<p class="leading-loose font-bold text-lg">Standaertsite</p>
+					<p class="text-lg leading-loose font-bold">Standaertsite</p>
 					<p>Standaertsite 1</p>
 					<p>9050 Ledeberg</p>
 				</a>
-			</div>
+			</LocationCard>
 		</div>
 	</div>
 </section>
 
-
-<section id="news" class="text-darkgray bg-white body-font">
-	<div class="container px-5 py-10 mx-auto max-w-screen-md">
-		<HeaderStyled header="Nieuws" />
-		<div class="flex flex-wrap -mx-4 my-8 text-lg md:text-base">
-
-			<div class="blog-post py-8 px-4">
-				<div class="h-full flex items-start">
-					<div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
-						<span class="text-darkgray pb-2 mb-2 border-b-2 border-darkgray">Okt</span>
-						<span class="font-medium text-lg text-lightgray leading-none title-font">2025</span>
-					</div>
-					<div class="flex-grow pl-6">
-						<p class="tracking-widest text-xs title-font font-medium text-gray">
-							FK Brugse Poort
-						</p>
-						<h2 class="title-font text-xl font-medium text-darkgray mb-3">
-							Update zoektocht nieuwe locatie Fietskeuken Brugse poort
-						</h2>
-						<p class="leading-relaxed mb-5">
-							De Fietskeuken in de Brugse Poort kan 1 jaar langer blijven in de ijdelijke invulling in de Meubelfabriek. MAAR dit is een harde deadline. Tegen 31 december 2026, moet de laagbouw, waar wij ons atelier hebben, leeggemaakt zijn. Er is geen kans meer op verlenging. In 2027 wordt deze laagbouw afgebroken, het dak is in slechte staat.
-						</p>
-						<p class="leading-relaxed mb-5">We zijn dus zeker dat wij een andere locatie moeten vinden. Dus graag nog eens een oproep.</p>
-						<p class="leading-relaxed mb-5">Weet je een leegstaande hangar/magazijn/zaal... zijn? Ken je de eigenaar van zo'n pand? Ben je eigenaar van zo'n pand? Geef ons contactgegevens, adressen, gerust door via <a href="mailto:info@fietskeuken.org?SUBJECT=Oproep%20locatie">info@fietskeuken.org</a>.</p>
-						<p class="leading-relaxed mb-5">Het maakt niet uit of het een huur/koop/... pand is. We proberen zo veel mogelijk eigenaars te contacteren. Wie weet is er een regeling mogelijk die bij onze werking past. Handig om te weten:</p>
-						<ul class="list-disc m-5">
-							<li>We blijven graag in de Brugse Poort, of toch zeker niet ver daar buiten.</li>
-							<li>We hebben liefst een ruimte van ca. 150m² nodig.</li>
-							<li>Een toilet, water- en een elektriciteitsaansluiting zijn ook nodig.</li>
-						</ul>
-						<p class="leading-relaxed mb-5">Dank om mee uit te kijken.</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="blog-post py-8 px-4">
-				<div class="h-full flex items-start">
-					<div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
-						<span class="text-darkgray pb-2 mb-2 border-b-2 border-darkgray">Jun</span>
-						<span class="font-medium text-lg text-lightgray leading-none title-font">2025</span>
-					</div>
-					<div class="flex-grow pl-6">
-						<p class="tracking-widest text-xs title-font font-medium text-gray">
-							FK Brugse Poort
-						</p>
-						<h2 class="title-font text-xl font-medium text-darkgray mb-3">
-							Fietskeuken Brugse Poort op zoek naar nieuwe locatie
-						</h2>
-						<p class="leading-relaxed mb-5">
-							Liefste fietsvrienden en fietsvriendinnen,
-						</p>
-						<p class="leading-relaxed mb-5">
-							Vonden jullie de afgelopen jaren de weg naar ons atelier in de Meubelfabriek? Fantastisch! Hopelijk bolt jullie stalen ros duchtig verder!
-						</p>
-						<p class="leading-relaxed mb-5">
-							Jullie zijn nog welkom tot eind 2025 in de Meubelfabriek, daarna stopt daar helaas de tijdelijke invulling en moet ook de Fietskeuken elders onderdak vinden...
-						</p>
-						<p class="leading-relaxed mb-5">
-							Hierbij dan ook een warme oproep: ken je een locatie in of nabij de Brugse Poort waar we onze werking kunnen verder zetten? Laat het ons dan weten! We zijn bereikbaar via <br><a href="mailto:info@fietskeuken.org"
-							class="font-medium hover:underline break-all">info@fietskeuken.org.</a>
-						</p>
-						<p class="leading-relaxed mb-5">
-							Ken je geen locatie, maar wil je toch helpen? Deel dit bericht dan, of spreek mensen aan die je kent van de Brugse Poort om het nieuws over onze zoektocht te verspreiden.
-						</p>
-						<p class="leading-relaxed mb-5">
-							Wij zijn jullie eeuwig dankbaar!
-						</p>
-						<p class="leading-relaxed mb-5">
-							Fijne fietsgroet,<br>
-							De Fietskeuken van de Brugse Poort
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="blog-post py-8 px-4">
-				<div class="h-full flex items-start">
-					<div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
-						<span class="text-darkgray pb-2 mb-2 border-b-2 border-darkgray">Apr</span>
-						<span class="font-medium text-lg text-lightgray leading-none title-font">2024</span>
-					</div>
-					<div class="flex-grow pl-6">
-						<p class="tracking-widest text-xs title-font font-medium text-gray">
-							FK Bloemekenswijk
-						</p>
-						<h2 class="title-font text-xl font-medium text-darkgray mb-3">
-							Feest! Ook het noorden van Gent krijgt zijn Fietskeuken.
-						</h2>
-						<p class="leading-relaxed mb-5">
-							In samenwerking met vzw Jong en OCUP vzw start er een nieuwe fietskeuken in de Bloemekenswijk op het Jan Yoensplein. De ingang vind je op de hoek van de Kriekelaarstraat en de Maïsstraat. We starten op donderdag 2 mei en zijn vanaf dan elke donderdag van 19u tot 21u open. De nieuwe fietskeuken beperkt zich - voorlopig - tot het 'koken' met fietsonderdelen als ingrediënten. In de toekomst zijn speciale openingsavonden met een maaltijd natuurlijk mogelijk.
-						</p>
-						<p class="leading-relaxed mb-5">
-							Elke donderdagavond vanaf 2 mei 2024 welkom op de hoek van het Jan Yoensplein om aan je fiets te sleutelen, voor een
-							babbel of om er gewoon bij te zijn. Wie graag een handje toesteekt op welke manier dan ook, mag dat gerust laten
-							weten door te mailen naar <a href="mailto:fietskeukenbloemekenswijk@gmail.com?SUBJECT=Vraag%20via%20website"
-							class="font-medium hover:underline break-all"> fietskeukenbloemekenswijk@gmail.com.</a>
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="blog-post py-8 px-4">
-				<div class="h-full flex items-start">
-					<div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
-						<span class="text-darkgray pb-2 mb-2 border-b-2 border-darkgray">Nov</span>
-						<span class="font-medium text-lg text-lightgray leading-none title-font">2023</span>
-					</div>
-					<div class="flex-grow pl-6">
-						<p class="tracking-widest text-xs title-font font-medium text-gray">
-							FK Brugse Poort
-						</p>
-						<h2 class="title-font text-xl font-medium text-darkgray mb-3">
-							Fietskeuken Brugse Poort vanaf 16u geopend
-						</h2>
-						<p class="leading-relaxed mb-5">
-							Sinds oktober 2023 is de Fietskeuken in de Brugse Poort op donderdag al vanaf 16h open. Kom dus extra vroeg als je extra veel werk hebt aan je fiets.
-							Let wel: als er eens een tekort is aan vrijwilligers kunnen onze openingsuren afwijken.
-							Check daarom best steeds onze <a href="https://www.facebook.com/FietskeukenGent" class="underline">Facebookpagina</a>
-						</p>
-					</div>
-				</div>
-			</div>
-
-
-			<div class="blog-post py-8 px-4">
-				<div class="h-full flex items-start">
-					<div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
-						<span class="text-darkgray pb-2 mb-2 border-b-2 border-darkgray">Jan</span>
-						<span class="font-medium text-lg text-lightgray leading-none title-font">2023</span>
-					</div>
-					<div class="flex-grow pl-6">
-						<p class="tracking-widest text-xs title-font font-medium text-gray">
-							FK Brugse Poort
-						</p>
-						<h2 class="title-font text-xl font-medium text-darkgray mb-3">
-							Fietskeuken vanaf 9 februari op donderdag
-						</h2>
-						<p class="leading-relaxed mb-5">
-							Voortaan zijn we enkel open op donderdag-avonden (zoals het vroeger was). Eerst
-							volgende opening donderdag 9 februari van 18u tot 21u30.
-						</p>
-						<p class="leading-relaxed mb-5">Welkom!</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="blog-post py-8 px-4">
-				<div class="h-full flex items-start">
-					<div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
-						<span class="text-darkgray pb-2 mb-2 border-b-2 border-darkgray">Dec</span>
-						<span class="font-medium text-lg text-lightgray leading-none title-font">2022</span>
-					</div>
-					<div class="flex-grow pl-6">
-						<p class="tracking-widest text-xs title-font font-medium text-gray">
-							FK Brugse Poort
-						</p>
-						<h2 class="title-font text-xl font-medium text-darkgray mb-3">
-							Afscheid van de maandagploeg
-						</h2>
-						<p class="leading-relaxed mb-5">
-							Na jaren van noeste arbeid houdt onze maandagploeg er tot nader order mee op. Vanaf
-							januari is er dus enkel nog een avondopening op dinsdag.
-						</p>
-						<p class="leading-relaxed mb-5">
-							We gaan actief opzoek naar nieuwe vrijwilligers om opnieuw een namiddagwerking
-							mogelijk te maken. Veel dankaan alle maandagmechaniekers voor menig duizend uren
-							gesleutel!
-						</p>
-						<p class="leading-relaxed mb-5">
-							Zoals altijd: heeft u zin om te komen vrijwilligen? Laat van u horen!
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="blog-post py-8 px-4">
-				<div class="h-full flex items-start">
-					<div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
-						<span class="text-darkgray pb-2 mb-2 border-b-2 border-darkgray">Mei</span>
-						<span class="font-medium text-lg text-lightgray leading-none title-font">2022</span>
-					</div>
-					<div class="flex-grow pl-6">
-						<p class="tracking-widest text-xs title-font font-medium text-gray">
-							FK Brugse Poort
-						</p>
-						<h2 class="title-font text-xl font-medium text-darkgray mb-3">
-							Fietskeuken Brugse Poort open op dinsdag
-						</h2>
-						<p class="leading-relaxed mb-5">
-							Voor wie de Fietskeuken reeds een tijdje bezoekt is donderdavond een vaste afspraak.
-							Vanaf mei 2022 kan je ons bezoeken op dinsdagavond.
-						</p>
-						<p class="leading-relaxed mb-5">
-							De maandagmiddag ploeg blijft natuurlijk ook nog steeds beschikbaar.
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="blog-post py-8 px-4">
-				<div class="h-full flex items-start">
-					<div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
-						<span class="text-darkgray pb-2 mb-2 border-b-2 border-darkgray">Apr</span>
-						<span class="font-medium text-lg text-lightgray leading-none title-font">2019</span>
-					</div>
-					<div class="flex-grow pl-6">
-						<p class="tracking-widest text-xs title-font font-medium text-gray">
-							FK Brugse Poort
-						</p>
-						<h2 class="title-font text-xl font-medium text-darkgray mb-3">
-							Nieuw adres Fietskeuken Brugse Poort!
-						</h2>
-						<p class="leading-relaxed mb-5">
-							Vanaf mei 2019 is de Fietskeuken Brugse Poort terug actief in de Meubelfabriek,
-							Meibloemstraat 18.
-						</p>
-						<p class="leading-relaxed mb-5">
-							Alvast een serieuze dankjewel aan Treck Hostel om enkele jaren onderdak te
-							verschaffen. Merci voor de fijne samenwerking!
-						</p>
-						<p class="leading-relaxed mb-5">
-							In de meubelfabriek zullen we onder goed gezelschap, check zeker eens de
-							<a href="https://www.facebook.com/meubelfabriek/" class="underline"
-								>facebook pagina van de Meubelfabriek</a
-							>. Hopelijk tot binnenkort!
-						</p>
-					</div>
-				</div>
-			</div>
+<section id="news" class="text-darkgray body-font bg-white">
+	<div class="container mx-auto max-w-screen-md px-5 py-10">
+		<SectionHeading text="Nieuws" />
+		<div class="my-8 flex flex-wrap text-lg md:text-base">
+			{#each newsItems as item (item.slug)}
+				<NewsItem {item} />
+			{/each}
 		</div>
 	</div>
 </section>
