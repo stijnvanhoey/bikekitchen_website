@@ -2,6 +2,28 @@
 // is hand-edited by maintainers only, never populated from user input.
 export const newsItems = [
 	{
+		slug: 'tijdelijk-gesloten-tijdens-verhuis-2026-09',
+		date: '2026-09-21',
+		location: 'FK Brugse Poort',
+		title: 'Tijdelijk gesloten tijdens verhuis',
+		paragraphs: [
+			'Na bijna 6 mooie jaren, naar schatting 2.400 vervangen remblokjes, 900 geplakte banden, een gezonde dosis zweten, vloeken, lachen en leren, is het tijd om de vijzen in te pakken!',
+			'We moeten helaas ons mooi atelier in de Meubelfabriek verlaten, omdat ons deel van het gebouw begin 2027 wordt afgebroken. Vanaf oktober 2026 sluiten de deuren op de huidige locatie.',
+			'Begin 2027 gaan we verder op een nieuwe stek! We hebben de droomlocatie nog niet gevonden, dus alle tips voor een nieuw atelier zijn nog steeds meer dan welkom.',
+			'Hopelijk tot snel in 2027!'
+		],
+	},	
+	{
+		slug: 'parktool-winnaar-2026-03',
+		date: '2026-03-01',
+		location: 'FK Brugse Poort',
+		title: 'And the winner is...',
+		paragraphs: [
+			'Jaarlijks doneert <a class="underline" href="https://www.parktool.com/en-us/blog/news/park-tool-announces-winners-of-2026-community-tool-grants">Parktool</a> fietsherstelmateriaal aan tien non-profit organisaties en dit jaar vallen wij ook in de prijzen. Aangezien wij volledig draaien op vrije bijdrages van onze bezoekers zijn donaties zoals deze zeer welkom.',
+			'Kom dus zeker binnenkort eens af om ons nieuw materiaal te testen.'
+		],
+	},	
+	{
 		slug: 'locatie-update-2025-10',
 		date: '2025-10-01',
 		location: 'FK Brugse Poort',
