@@ -1,0 +1,46 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-darkgray: #1e1e1e;
+	--color-semigray: #373737;
+	--color-lightgray: #9a9a9a;
+	--color-extralightgray: #e4e4e4;
+	--color-white: #f3f4f6;
+	--color-blue: #427aa1;
+	--font-sans: 'Atkinson', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+	@font-face {
+		font-family: 'Atkinson';
+		src: url('/fonts/Atkinson-Hyperlegible-Regular-102.woff') format('woff');
+		font-weight: 400;
+		font-style: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'Atkinson';
+		src: url('/fonts/Atkinson-Hyperlegible-Bold-102.woff') format('woff');
+		font-weight: 700;
+		font-style: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'Atkinson';
+		src: url('/fonts/Atkinson-Hyperlegible-Italic-102.woff') format('woff');
+		font-weight: 400;
+		font-style: italic;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'Atkinson';
+		src: url('/fonts/Atkinson-Hyperlegible-BoldItalic-102.woff') format('woff');
+		font-weight: 700;
+		font-style: italic;
+		font-display: swap;
+	}
+
+	body {
+		@apply font-sans;
+	}
+}
