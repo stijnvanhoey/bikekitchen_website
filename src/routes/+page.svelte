@@ -9,11 +9,15 @@
 	const description =
 		'Tijdens de RepareerBAaR van de Fietskeuken kunnen fietsliefhebbers vrijblijvend sleutelen met hulp van de vrijwilligers.';
 
-	// keep these opening hours in sync with the LocationCard content below — manual step
-	const localBusinessJsonLd = JSON.stringify([
+	const localBusinessJsonLd = [
 		{
 			'@context': 'https://schema.org',
 			'@type': 'LocalBusiness',
+			variant: 'brugse-poort',
+			cardName: 'FK Brugse Poort',
+			venue: 'Meubelfabriek',
+			facebook: 'https://www.facebook.com/FietskeukenGent',
+			map: 'https://goo.gl/maps/jufjmNWP3hALfHmf6',
 			name: 'Fietskeuken Gent - Brugse Poort',
 			address: {
 				'@type': 'PostalAddress',
@@ -27,11 +31,19 @@
 				dayOfWeek: 'Thursday',
 				opens: '16:00',
 				closes: '21:30'
-			}
+			},
+			openingHoursLabel: 'Heel vaak open op',
+			openingHoursText: 'donderdag van 16:00 - 21:30',
+			facebookLabel: 'Om helemaal zeker te zijn, check'
 		},
 		{
 			'@context': 'https://schema.org',
 			'@type': 'LocalBusiness',
+			variant: 'ledeberg',
+			cardName: 'FK Ledeberg',
+			venue: 'Standaertsite',
+			facebook: 'https://www.facebook.com/fietskeukenledeberg',
+			map: 'https://goo.gl/maps/Y75sUcsPnFZaHzJb8',
 			name: 'Fietskeuken Ledeberg',
 			address: {
 				'@type': 'PostalAddress',
@@ -45,9 +57,19 @@
 				dayOfWeek: 'Wednesday',
 				opens: '18:30',
 				closes: '21:00'
-			}
+			},
+			openingHoursLabel: 'Woensdag:',
+			openingHoursText: '18:30 - 21:00',
+			facebookLabel: 'Voor up to date info, check'
 		}
-	]);
+	];
+
+	const localBusinessJsonLdScript = JSON.stringify(
+		localBusinessJsonLd.map(
+			({ variant, cardName, venue, facebook, map, openingHoursLabel, openingHoursText, facebookLabel, ...business }) =>
+				business
+		)
+	);
 </script>
 
 <svelte:head>
@@ -61,7 +83,7 @@
 	<meta property="og:image:width" content="450" />
 	<meta property="og:image:height" content="450" />
 
-	{@html '<' + 'script type="application/ld+json">' + localBusinessJsonLd + '<' + '/script>'}
+	<script type="application/ld+json">{localBusinessJsonLdScript}</script>
 </svelte:head>
 
 <FkHero imgUrl={homeImg} header="Fietskeuken Gent" subheader="Bike repair and food" />
@@ -69,30 +91,23 @@
 <section id="where" class="text-lightgray bg-darkgray body-font pt-8">
 	<div class="container mx-auto max-w-screen-lg px-5 py-12">
 		<div class="flex flex-wrap place-content-around gap-2">
-			<LocationCard variant="brugse-poort" name="FK Brugse Poort">
-				<p class="my-1 text-center text-xl">Heel vaak open op<br />donderdag van 16:00 - 21:30</p>
-				<p class="mb-8 text-center text-sm">
-					Om helemaal zeker te zijn, check
-					<a href="https://www.facebook.com/FietskeukenGent" class="underline">Facebook</a>
+			{#each localBusinessJsonLd as location}
+			<LocationCard variant={location.variant} name={location.cardName}>
+				<p class="my-1 text-center text-xl">
+					{location.openingHoursLabel}<br />
+					{location.openingHoursText}
 				</p>
-				<a href="https://goo.gl/maps/jufjmNWP3hALfHmf6" class="text-center">
-					<p class="text-lg leading-loose font-bold">Meubelfabriek</p>
-					<p>Meibloemstraat 18</p>
-					<p>9000 Gent</p>
+				<p class="mb-8 text-center text-sm">
+					{location.facebookLabel}
+					<a href={location.facebook} class="underline">Facebook</a>
+				</p>
+				<a href={location.map} class="text-center">
+					<p class="text-lg leading-loose font-bold">{location.venue}</p>
+					<p>{location.address.streetAddress}</p>
+					<p>{location.address.postalCode} {location.address.addressLocality}</p>
 				</a>
 			</LocationCard>
-			<LocationCard variant="ledeberg" name="FK Ledeberg">
-				<p class="my-4 text-xl">Woensdag: 18u30 - 21u</p>
-				<p class="mb-8 text-center text-sm">
-					Voor up to date info, check
-					<a href="https://www.facebook.com/fietskeukenledeberg" class="underline">Facebook</a>
-				</p>
-				<a href="https://goo.gl/maps/Y75sUcsPnFZaHzJb8" class="text-center">
-					<p class="text-lg leading-loose font-bold">Standaertsite</p>
-					<p>Standaertsite 1</p>
-					<p>9050 Ledeberg</p>
-				</a>
-			</LocationCard>
+			{/each}
 		</div>
 	</div>
 </section>
