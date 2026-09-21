@@ -20,7 +20,7 @@
 		<div class="mb-12 w-full px-5 text-left">
 			<SectionHeading text="Privacybeleid" level="h1" />
 			<div class="flex flex-col">
-				<p class="p-4 italic">Laatst bijgewerkt: 2025-11-17</p>
+				<p class="p-4 italic">Laatst bijgewerkt: 2026-09-21</p>
 
 				<p>
 					Wij stellen uw privacy voorop. Deze website is door Fietskeuken Gent VZW ontworpen om met

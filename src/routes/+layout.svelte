@@ -107,7 +107,7 @@
 			class="container mx-auto flex max-w-xs flex-col justify-start px-8 py-8 md:max-w-fit lg:flex-row"
 		>
 			<p
-				class="text-semigray mt-4 text-sm sm:mt-0 sm:ml-4 sm:py-2 sm:pl-4 lg:border-l lg:border-lightgray"
+				class="text-lightgray mt-4 text-sm sm:mt-0 sm:ml-4 sm:py-2 sm:pl-4 lg:border-l lg:border-lightgray"
 			>
 				FK Brugse Poort - Fietskeuken Gent VZW<br />
 				Meibloemstraat 18, 9000 Gent<br />
@@ -120,7 +120,7 @@
 				RPR, Ondernemingsrechtbank te Gent<br /><br />
 			</p>
 			<p
-				class="text-semigray mt-4 text-sm sm:mt-0 sm:ml-4 sm:py-2 sm:pl-4 lg:border-l lg:border-lightgray"
+				class="text-lightgray mt-4 text-sm sm:mt-0 sm:ml-4 sm:py-2 sm:pl-4 lg:border-l lg:border-lightgray"
 			>
 				FK Ledeberg - Fietskeuken Ledeberg<br />
 				Standaertsite 1, 9050 Ledeberg<br />
@@ -131,16 +131,16 @@
 				>
 			</p>
 		</div>
-		<p class="text-semigray mt-4 text-center text-sm sm:mt-0 sm:ml-4 sm:py-2 sm:pl-4">
+		<p class="text-lightgray mt-4 text-center text-sm sm:mt-0 sm:ml-4 sm:py-2 sm:pl-4">
 			<a href="/privacy" class="inline-block py-2">Privacy beleid</a>
 		</p>
-		<p class="text-semigray mt-4 text-center text-sm sm:mt-0 sm:ml-4 sm:py-2 sm:pl-4">
+		<p class="text-lightgray mt-4 text-center text-sm sm:mt-0 sm:ml-4 sm:py-2 sm:pl-4">
 			Logo Koen Degroote<br />Fotos Daan Van Hauwermeiren
 		</p>
 		<div class="items-center">
 			<span class="mt-4 inline-flex justify-center sm:mt-0 sm:ml-auto sm:justify-start">
 				<a
-					class="text-semigray ml-1 inline-flex items-center justify-center p-3"
+					class="text-lightgray ml-1 inline-flex items-center justify-center p-3"
 					href="https://www.facebook.com/pages/Fietskeuken-Gent-Bike-kitchen-Ghent/150152548379572"
 					aria-label="Fietskeuken Gent op Facebook"
 				>
@@ -162,7 +162,7 @@
 					</svg>
 				</a>
 				<a
-					class="text-semigray ml-1 inline-flex items-center justify-center p-3"
+					class="text-lightgray ml-1 inline-flex items-center justify-center p-3"
 					href="https://github.com/stijnvanhoey/bikekitchen_website"
 					aria-label="Broncode van deze website op GitHub"
 				>
