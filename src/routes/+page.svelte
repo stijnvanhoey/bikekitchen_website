@@ -75,6 +75,28 @@
 			<div class="blog-post py-8 px-4">
 				<div class="h-full flex items-start">
 					<div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
+						<span class="text-darkgray pb-2 mb-2 border-b-2 border-darkgray">Sep</span>
+						<span class="font-medium text-lg text-lightgray leading-none title-font">2026</span>
+					</div>
+					<div class="flex-grow pl-6">
+						<p class="tracking-widest text-xs title-font font-medium text-gray">
+							FK Brugse Poort
+						</p>
+						<h2 class="title-font text-xl font-medium text-darkgray mb-3">
+							Tijdelijk gesloten tijdens verhuis
+						</h2>
+						<p class="leading-relaxed mb-5">Na bijna 6 mooie jaren, naar schatting 2.400 vervangen remblokjes, 900 geplakte banden, een gezonde dosis zweten, vloeken, lachen en leren, is het tijd om de vijzen in te pakken!
+</p>
+						<p class="leading-relaxed mb-5">We moeten helaas ons mooi atelier in de Meubelfabriek verlaten, omdat ons deel van het gebouw begin 2027 wordt afgebroken. Vanaf oktober 2026 sluiten de deuren op de huidige locatie.</p>
+						<p class="leading-relaxed mb-5">Begin 2027 gaan we verder op een nieuwe stek! We hebben de droomlocatie nog niet gevonden, dus alle tips voor een nieuw atelier zijn nog steeds meer dan welkom.</p>
+						<p class="leading-relaxed mb-5">Hopelijk tot snel in 2027!</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="blog-post py-8 px-4">
+				<div class="h-full flex items-start">
+					<div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
 						<span class="text-darkgray pb-2 mb-2 border-b-2 border-darkgray">Mar</span>
 						<span class="font-medium text-lg text-lightgray leading-none title-font">2026</span>
 					</div>
