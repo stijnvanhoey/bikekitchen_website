@@ -75,6 +75,25 @@
 			<div class="blog-post py-8 px-4">
 				<div class="h-full flex items-start">
 					<div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
+						<span class="text-darkgray pb-2 mb-2 border-b-2 border-darkgray">Mar</span>
+						<span class="font-medium text-lg text-lightgray leading-none title-font">2026</span>
+					</div>
+					<div class="flex-grow pl-6">
+						<p class="tracking-widest text-xs title-font font-medium text-gray">
+							FK Brugse Poort
+						</p>
+						<h2 class="title-font text-xl font-medium text-darkgray mb-3">
+							And the winner is...
+						</h2>
+						<p class="leading-relaxed mb-5">Jaarlijks doneert <a class="underline" href="https://www.parktool.com/en-us/blog/news/park-tool-announces-winners-of-2026-community-tool-grants">Parktool</a> fietsherstelmateriaal aan tien non-profit organisaties en dit jaar vallen wij ook in de prijzen. Aangezien wij volledig draaien op vrije bijdrages van onze bezoekers zijn donaties zoals deze zeer welkom.</p>
+						<p class="leading-relaxed mb-5">Kom dus zeker binnenkort eens af om ons nieuw materiaal te testen.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="blog-post py-8 px-4">
+				<div class="h-full flex items-start">
+					<div class="w-12 flex-shrink-0 flex flex-col text-center leading-none">
 						<span class="text-darkgray pb-2 mb-2 border-b-2 border-darkgray">Okt</span>
 						<span class="font-medium text-lg text-lightgray leading-none title-font">2025</span>
 					</div>
