@@ -24,6 +24,16 @@ export const newsItems = [
 		],
 	},	
 	{
+		slug: 'bloemekenswijk-einde-2025-12',
+		date: '2025-12-10',
+		location: 'FK Bloemekenswijk',
+		title: 'FK Bloemekenswijk stopt.',
+		paragraphs: [
+			"De Fietskeuken in de Bloemekenswijk is stopgezet. Het is dus niet langer mogelijk om op het Jan Yoensplein je fiets te herstellen. Iedereen is natuurlijk welkom op de andere fietskeukens in het Gentse.",
+			"Dikke merci aan alle vrijwilligers die het beste van zichzelf hebben gegeven om ook in de Bloemekenswijk de Fietskeuken te laten leven."
+		]
+	},	
+	{
 		slug: 'locatie-update-2025-10',
 		date: '2025-10-01',
 		location: 'FK Brugse Poort',
