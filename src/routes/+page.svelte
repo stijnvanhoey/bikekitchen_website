@@ -32,8 +32,8 @@
 				opens: '16:00',
 				closes: '21:30'
 			},
-			openingHoursLabel: 'Heel vaak open op',
-			openingHoursText: 'donderdag van 16:00 - 21:30',
+			openingHoursLabel: 'Tijdelijk gesloten',
+			openingHoursText: 'tot begin 2027',
 			facebookLabel: 'Om helemaal zeker te zijn, check'
 		},
 		{
@@ -86,7 +86,7 @@
 	<script type="application/ld+json">{localBusinessJsonLdScript}</script>
 </svelte:head>
 
-<FkHero imgUrl={homeImg} header="Fietskeuken Gent" subheader="Bike repair and food" />
+<FkHero imgUrl={homeImg} header="Fietskeuken Gent" subheader="Community bike repair" />
 
 <section id="where" class="text-lightgray bg-darkgray body-font pt-8">
 	<div class="container mx-auto max-w-screen-lg px-5 py-12">
